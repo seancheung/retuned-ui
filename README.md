@@ -4,6 +4,8 @@ A retuned, dark-first React component library built with [Tailwind CSS v4](https
 
 The design system features an amber primary palette, a layered dark base, an off-white content ladder, and semantic colors tuned for dark backgrounds, with [Geist](https://vercel.com/font) as the default typeface.
 
+**[Live demo →](https://seancheung.github.io/retuned-ui/)** — typography, color system, and every component in action.
+
 ## Components
 
 | | | | |
@@ -93,9 +95,12 @@ This repo doubles as a live showcase of every component:
 ```sh
 npm install
 npm run dev       # start the showcase (typography, colors, component demos)
+npm run build     # build the showcase
 npm run check     # lint + format check (biome)
 npm run validate  # validate the shadcn registry
 ```
+
+The showcase is deployed automatically to [GitHub Pages](https://seancheung.github.io/retuned-ui/) on every push to `main` (see `.github/workflows/deploy-pages.yml`).
 
 The registry is defined by `registry.json` at the repo root, which includes `src/registry.json` (base setup) and `src/components/ui/registry.json` (components). Demo code for each component lives in `src/components/*-demo.tsx`.
 
