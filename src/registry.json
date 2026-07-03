@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "items": [
+    {
+      "name": "setup",
+      "type": "registry:item",
+      "title": "",
+      "description": "",
+      "files": [
+        {
+          "path": "style.css",
+          "type": "registry:file",
+          "target": "~/theme.css"
+        },
+        {
+          "path": "utils/cn.ts",
+          "type": "registry:file",
+          "target": "~/utils/cn.ts"
+        }
+      ]
+    }
+  ]
+}

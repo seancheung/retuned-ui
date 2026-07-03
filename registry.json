@@ -1,0 +1,6 @@
+{
+    "$schema": "https://ui.shadcn.com/schema/registry.json",
+    "name": "retuned-ui",
+    "homepage": "https://github.com/seancheung/retuned-ui",
+    "include": ["src/registry.json", "src/components/ui/registry.json"]
+}

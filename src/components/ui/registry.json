@@ -1,0 +1,109 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "items": [
+    {
+      "name": "alert",
+      "type": "registry:item",
+      "title": "",
+      "description": "",
+      "registryDependencies": ["seancheung/retuned-ui/setup"],
+      "files": [
+        {
+          "path": "alert.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/alert.tsx"
+        }
+      ]
+    },
+    {
+      "name": "badge",
+      "type": "registry:item",
+      "title": "",
+      "description": "",
+      "registryDependencies": ["seancheung/retuned-ui/setup"],
+      "files": [
+        {
+          "path": "badge.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/badge.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button",
+      "type": "registry:item",
+      "title": "",
+      "description": "",
+      "registryDependencies": ["seancheung/retuned-ui/setup"],
+      "files": [
+        {
+          "path": "button.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/button.tsx"
+        }
+      ]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:item",
+      "title": "",
+      "description": "",
+      "registryDependencies": ["seancheung/retuned-ui/setup"],
+      "files": [
+        {
+          "path": "checkbox.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/checkbox.tsx"
+        }
+      ]
+    },
+    {
+      "name": "combobox",
+      "type": "registry:item",
+      "title": "",
+      "description": "",
+      "registryDependencies": ["seancheung/retuned-ui/setup"],
+      "files": [
+        {
+          "path": "combobox.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/combobox.tsx"
+        }
+      ]
+    },
+    {
+      "name": "context-menu",
+      "type": "registry:item",
+      "title": "",
+      "description": "",
+      "registryDependencies": [
+        "seancheung/retuned-ui/setup",
+        "seancheung/retuned-ui/menu"
+      ],
+      "files": [
+        {
+          "path": "context-menu.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/context-menu.tsx"
+        }
+      ]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:item",
+      "title": "",
+      "description": "",
+      "registryDependencies": [
+        "seancheung/retuned-ui/setup",
+        "seancheung/retuned-ui/button"
+      ],
+      "files": [
+        {
+          "path": "dialog.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/dialog.tsx"
+        }
+      ]
+    }
+  ]
+}
