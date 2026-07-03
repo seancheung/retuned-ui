@@ -4,8 +4,9 @@
     {
       "name": "alert",
       "type": "registry:item",
-      "title": "",
-      "description": "",
+      "title": "Alert",
+      "description": "A callout banner for inline feedback with success, warning, error and info variants, plus an optional title and dismiss button.",
+      "dependencies": ["class-variance-authority", "lucide-react"],
       "registryDependencies": ["seancheung/retuned-ui/setup"],
       "files": [
         {
@@ -18,8 +19,9 @@
     {
       "name": "badge",
       "type": "registry:item",
-      "title": "",
-      "description": "",
+      "title": "Badge",
+      "description": "A small status label with semantic color variants and rounded, bordered, opaque and size modifiers.",
+      "dependencies": ["@radix-ui/react-slot", "class-variance-authority"],
       "registryDependencies": ["seancheung/retuned-ui/setup"],
       "files": [
         {
@@ -32,8 +34,9 @@
     {
       "name": "button",
       "type": "registry:item",
-      "title": "",
-      "description": "",
+      "title": "Button",
+      "description": "A button with primary, secondary, danger and ghost variants, three sizes, and normal, square and circle shapes.",
+      "dependencies": ["@radix-ui/react-slot", "class-variance-authority"],
       "registryDependencies": ["seancheung/retuned-ui/setup"],
       "files": [
         {
@@ -46,8 +49,9 @@
     {
       "name": "checkbox",
       "type": "registry:item",
-      "title": "",
-      "description": "",
+      "title": "Checkbox",
+      "description": "A checkbox with a built-in label, supporting controlled and uncontrolled usage and a disabled state.",
+      "dependencies": ["class-variance-authority", "lucide-react"],
       "registryDependencies": ["seancheung/retuned-ui/setup"],
       "files": [
         {
@@ -60,8 +64,13 @@
     {
       "name": "combobox",
       "type": "registry:item",
-      "title": "",
-      "description": "",
+      "title": "Combobox",
+      "description": "A searchable select input with async loading, custom value entry, clearable selection and an optional leading icon.",
+      "dependencies": [
+        "@floating-ui/react",
+        "class-variance-authority",
+        "lucide-react"
+      ],
       "registryDependencies": ["seancheung/retuned-ui/setup"],
       "files": [
         {
@@ -74,8 +83,9 @@
     {
       "name": "context-menu",
       "type": "registry:item",
-      "title": "",
-      "description": "",
+      "title": "Context Menu",
+      "description": "A right-click menu with nested submenus, shortcuts, separators, danger items and dynamic item resolution from the trigger event.",
+      "dependencies": ["@floating-ui/react", "@radix-ui/react-slot"],
       "registryDependencies": [
         "seancheung/retuned-ui/setup",
         "seancheung/retuned-ui/menu"
@@ -91,8 +101,13 @@
     {
       "name": "dialog",
       "type": "registry:item",
-      "title": "",
-      "description": "",
+      "title": "Dialog",
+      "description": "A modal dialog with small, medium and large sizes, optional description and footer, and a non-closable mode for forced confirmation.",
+      "dependencies": [
+        "@floating-ui/react",
+        "class-variance-authority",
+        "lucide-react"
+      ],
       "registryDependencies": [
         "seancheung/retuned-ui/setup",
         "seancheung/retuned-ui/button"
@@ -102,6 +117,306 @@
           "path": "dialog.tsx",
           "type": "registry:file",
           "target": "~/components/ui/dialog.tsx"
+        }
+      ]
+    },
+    {
+      "name": "drawer",
+      "type": "registry:item",
+      "title": "Drawer",
+      "description": "A sliding panel that opens from any side of the screen, with a title, description and footer area.",
+      "dependencies": [
+        "@floating-ui/react",
+        "class-variance-authority",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "seancheung/retuned-ui/setup",
+        "seancheung/retuned-ui/button"
+      ],
+      "files": [
+        {
+          "path": "drawer.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/drawer.tsx"
+        }
+      ]
+    },
+    {
+      "name": "dropdown",
+      "type": "registry:item",
+      "title": "Dropdown",
+      "description": "A dropdown menu attached to any trigger, with nested submenus, icons, shortcuts, separators, danger items and a compact mode.",
+      "dependencies": ["@floating-ui/react", "@radix-ui/react-slot"],
+      "registryDependencies": [
+        "seancheung/retuned-ui/setup",
+        "seancheung/retuned-ui/menu"
+      ],
+      "files": [
+        {
+          "path": "dropdown.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/dropdown.tsx"
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "type": "registry:item",
+      "title": "Input",
+      "description": "A single-line text input with error state, optional leading icon and disabled state.",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["seancheung/retuned-ui/setup"],
+      "files": [
+        {
+          "path": "input.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "input-number",
+      "type": "registry:item",
+      "title": "Input Number",
+      "description": "A numeric input with stepper buttons, min/max/step constraints, integer-only and clearable modes.",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["seancheung/retuned-ui/setup"],
+      "files": [
+        {
+          "path": "input-number.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/input-number.tsx"
+        }
+      ]
+    },
+    {
+      "name": "input-password",
+      "type": "registry:item",
+      "title": "Input Password",
+      "description": "A password input with a visibility toggle, error state and optional leading icon.",
+      "dependencies": ["class-variance-authority", "lucide-react"],
+      "registryDependencies": ["seancheung/retuned-ui/setup"],
+      "files": [
+        {
+          "path": "input-password.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/input-password.tsx"
+        }
+      ]
+    },
+    {
+      "name": "knob",
+      "type": "registry:item",
+      "title": "Knob",
+      "description": "A rotary knob control for numeric values, adjusted by dragging, with multiple sizes.",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["seancheung/retuned-ui/setup"],
+      "files": [
+        {
+          "path": "knob.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/knob.tsx"
+        }
+      ]
+    },
+    {
+      "name": "menu",
+      "type": "registry:item",
+      "title": "Menu",
+      "description": "Shared floating menu primitives (items, nested submenus, shortcuts, separators) used by the dropdown and context-menu components.",
+      "dependencies": ["@floating-ui/react", "lucide-react"],
+      "registryDependencies": ["seancheung/retuned-ui/setup"],
+      "files": [
+        {
+          "path": "menu.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/menu.tsx"
+        }
+      ]
+    },
+    {
+      "name": "progress",
+      "type": "registry:item",
+      "title": "Progress",
+      "description": "A progress indicator in linear or circular shape with semantic color variants and sizes.",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["seancheung/retuned-ui/setup"],
+      "files": [
+        {
+          "path": "progress.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/progress.tsx"
+        }
+      ]
+    },
+    {
+      "name": "radio",
+      "type": "registry:item",
+      "title": "Radio",
+      "description": "A radio button with a built-in label, plus a RadioGroup for managing a single selection.",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["seancheung/retuned-ui/setup"],
+      "files": [
+        {
+          "path": "radio.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/radio.tsx"
+        }
+      ]
+    },
+    {
+      "name": "select",
+      "type": "registry:item",
+      "title": "Select",
+      "description": "A select input with placeholder, clearable selection, optional leading icon, and error and disabled states.",
+      "dependencies": [
+        "@floating-ui/react",
+        "class-variance-authority",
+        "lucide-react"
+      ],
+      "registryDependencies": ["seancheung/retuned-ui/setup"],
+      "files": [
+        {
+          "path": "select.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/select.tsx"
+        }
+      ]
+    },
+    {
+      "name": "skeleton",
+      "type": "registry:item",
+      "title": "Skeleton",
+      "description": "A pulsing placeholder block for loading states.",
+      "registryDependencies": ["seancheung/retuned-ui/setup"],
+      "files": [
+        {
+          "path": "skeleton.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/skeleton.tsx"
+        }
+      ]
+    },
+    {
+      "name": "slider",
+      "type": "registry:item",
+      "title": "Slider",
+      "description": "A horizontal slider for selecting a value from a range, with a disabled state.",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["seancheung/retuned-ui/setup"],
+      "files": [
+        {
+          "path": "slider.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/slider.tsx"
+        }
+      ]
+    },
+    {
+      "name": "switch",
+      "type": "registry:item",
+      "title": "Switch",
+      "description": "A toggle switch with a built-in label and multiple sizes.",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["seancheung/retuned-ui/setup"],
+      "files": [
+        {
+          "path": "switch.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/switch.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tab",
+      "type": "registry:item",
+      "title": "Tabs",
+      "description": "A tab bar with an animated active indicator, multiple sizes and per-item disabled state.",
+      "dependencies": ["class-variance-authority", "motion"],
+      "registryDependencies": ["seancheung/retuned-ui/setup"],
+      "files": [
+        {
+          "path": "tab.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/tab.tsx"
+        }
+      ]
+    },
+    {
+      "name": "table",
+      "type": "registry:item",
+      "title": "Table",
+      "description": "Styled table primitives (header, body, rows, cells and caption) for tabular data.",
+      "registryDependencies": ["seancheung/retuned-ui/setup"],
+      "files": [
+        {
+          "path": "table.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/table.tsx"
+        }
+      ]
+    },
+    {
+      "name": "textarea",
+      "type": "registry:item",
+      "title": "Textarea",
+      "description": "A multi-line text input with error and disabled states.",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["seancheung/retuned-ui/setup"],
+      "files": [
+        {
+          "path": "textarea.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/textarea.tsx"
+        }
+      ]
+    },
+    {
+      "name": "toast",
+      "type": "registry:item",
+      "title": "Toast",
+      "description": "Animated toast notifications with semantic variants, action buttons, custom duration and an imperative toast() API plus a Toaster outlet.",
+      "dependencies": ["class-variance-authority", "lucide-react", "motion"],
+      "registryDependencies": [
+        "seancheung/retuned-ui/setup",
+        "seancheung/retuned-ui/button"
+      ],
+      "files": [
+        {
+          "path": "toast.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/toast.tsx"
+        }
+      ]
+    },
+    {
+      "name": "toggle",
+      "type": "registry:item",
+      "title": "Toggle",
+      "description": "A pressable toggle button with semantic variants and sizes, plus a ToggleGroup for exclusive or cancelable selection.",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["seancheung/retuned-ui/setup"],
+      "files": [
+        {
+          "path": "toggle.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/toggle.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:item",
+      "title": "Tooltip",
+      "description": "A hover tooltip that can be positioned on any side of its trigger, with a disabled mode.",
+      "dependencies": ["@floating-ui/react", "@radix-ui/react-slot"],
+      "registryDependencies": ["seancheung/retuned-ui/setup"],
+      "files": [
+        {
+          "path": "tooltip.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/tooltip.tsx"
         }
       ]
     }

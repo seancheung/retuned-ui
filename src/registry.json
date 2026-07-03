@@ -4,8 +4,9 @@
     {
       "name": "setup",
       "type": "registry:item",
-      "title": "",
-      "description": "",
+      "title": "Setup",
+      "description": "Base setup for Retuned UI: the dark amber theme (Tailwind CSS v4 tokens for colors, typography, radius and shadows) and the cn class-merging utility. Required by every component in this registry.",
+      "dependencies": ["clsx", "tailwind-merge"],
       "files": [
         {
           "path": "style.css",
