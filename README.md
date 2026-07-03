@@ -88,6 +88,22 @@ createRoot(document.getElementById("root")!).render(
 );
 ```
 
+## Theming
+
+Dark is the default theme. To switch to the light theme, set `data-theme="light"` on the root element:
+
+```html
+<html data-theme="light">
+```
+
+Toggle it at runtime from anywhere:
+
+```ts
+document.documentElement.dataset.theme = "light"; // or "dark"
+```
+
+All color tokens (`primary-*`, `base-*`, `content-*`, and semantic colors) are CSS variables defined in `theme.css`, so every component adapts automatically — no component code references a specific theme. You can also customize either theme by editing the token values in `theme.css`.
+
 ## Development
 
 This repo doubles as a live showcase of every component:

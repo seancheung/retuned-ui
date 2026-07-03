@@ -120,7 +120,7 @@ const itemVariants = cva(
   {
     variants: {
       variant: {
-        default: "border-content-400/30 bg-base-400/95",
+        default: "border-base-400 bg-base-400/95",
         success: "border-success/25 bg-success/15",
         warning: "border-warning/25 bg-warning/15",
         error: "border-error/25 bg-error/15",

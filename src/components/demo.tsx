@@ -19,7 +19,7 @@ export function SectionHeader({
   desc?: string;
 }) {
   return (
-    <div className="mb-8 flex items-baseline justify-between gap-6 border-content-400/30 border-b pb-4">
+    <div className="mb-8 flex items-baseline justify-between gap-6 border-base-400 border-b pb-4">
       <div className="flex items-baseline gap-3">
         <span className="font-mono text-primary-500 text-xs">{number}</span>
         <h2 className="text-2xl">{title}</h2>
@@ -37,7 +37,7 @@ export function ComponentGroup({
   children: React.ReactNode;
 }) {
   return (
-    <div className="rounded-lg border border-content-400/30 bg-base-200 p-6">
+    <div className="rounded-lg border border-base-400 bg-base-100 p-6">
       <div className="mb-5 flex items-center gap-2 font-semibold text-content-300 text-sm uppercase tracking-wider">
         <span className="h-1 w-1 rounded-full bg-primary-500" />
         {title}

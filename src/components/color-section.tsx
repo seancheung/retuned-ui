@@ -139,11 +139,11 @@ export default function ColorSection() {
               {group.colors.map((color) => (
                 <div
                   key={color.name}
-                  className="overflow-hidden rounded-lg border border-content-400/30 bg-base-300"
+                  className="overflow-hidden rounded-lg border border-base-400 bg-base-100"
                 >
                   <div
                     className={cn(
-                      "flex h-18 items-center justify-center",
+                      "flex h-18 items-center justify-center border-base-200 border-b",
                       color.className,
                     )}
                   >

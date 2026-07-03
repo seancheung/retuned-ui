@@ -51,7 +51,7 @@ export default function TypographySection() {
         {typeRows.map((row) => (
           <div
             key={row.label}
-            className="grid grid-cols-[140px_1fr] items-center gap-6 border-content-400/30 border-b border-dashed py-5 last:border-b-0"
+            className="grid grid-cols-[140px_1fr] items-center gap-6 border-base-400 border-b border-dashed py-5 last:border-b-0"
           >
             <div className="pt-2 font-mono text-content-300 text-xs">
               <strong className="mb-1 block font-medium text-content-200 uppercase tracking-wider">

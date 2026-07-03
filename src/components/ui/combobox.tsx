@@ -23,13 +23,13 @@ import { useEffect, useId, useRef, useState } from "react";
 import { cn } from "@/utils/cn";
 
 const containerVariants = cva(
-  "flex h-8 min-w-50 items-center gap-1.5 rounded-md border bg-base-100 pr-1.5 pl-3 text-content-200 text-sm transition-all",
+  "flex h-8 min-w-50 items-center gap-1.5 rounded-md border bg-base-100 pr-1.5 pl-3 text-content-100 text-sm transition-all",
   {
     variants: {
       error: {
         true: "border-error focus-within:ring-3 focus-within:ring-error/10",
         false:
-          "border-content-400/50 focus-within:border-primary-500 focus-within:ring-3 focus-within:ring-primary-500/10",
+          "border-base-400 focus-within:border-primary-500 focus-within:ring-3 focus-within:ring-primary-500/10",
       },
       disabled: {
         true: "opacity-40",
@@ -359,7 +359,7 @@ export default function Combobox<T = unknown>({
             <div
               id={listId}
               style={{ ...transitionStyles, maxHeight: "inherit" }}
-              className="flex flex-col overflow-y-auto rounded-md border border-content-400/30 bg-base-400 p-1 text-content-200 text-sm shadow-lg"
+              className="flex flex-col overflow-y-auto rounded-md border border-base-400 bg-base-100 p-1 text-content-100 text-sm shadow-lg"
             >
               {showLoading && (
                 <div className="flex items-center justify-center gap-2 px-2 py-3 text-content-400 text-xs">
@@ -390,7 +390,7 @@ export default function Combobox<T = unknown>({
                     data-active={isActive}
                     className={cn(
                       "flex h-7 shrink-0 cursor-pointer items-center gap-2 rounded-sm px-2 outline-none transition-colors",
-                      "data-[active=true]:bg-content-400/50 data-[active=true]:text-content-100",
+                      "data-[active=true]:bg-base-300 data-[active=true]:text-content-100",
                       "aria-disabled:cursor-not-allowed aria-disabled:opacity-40",
                     )}
                     {...getItemProps({

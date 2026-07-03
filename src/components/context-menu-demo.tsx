@@ -133,7 +133,7 @@ function ContextMenuTarget({
     <div
       {...props}
       className={cn(
-        "flex h-16 flex-1 select-none items-center justify-center rounded-md border border-content-400/30 border-dashed bg-base-300 px-4 text-content-300 text-xs",
+        "flex h-16 flex-1 select-none items-center justify-center rounded-md border border-base-400 border-dashed bg-base-300 px-4 text-content-300 text-xs",
         "hover:border-primary-500/50 hover:text-content-200",
         props.className,
       )}

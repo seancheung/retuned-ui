@@ -20,13 +20,13 @@ import { useRef, useState } from "react";
 import { cn } from "@/utils/cn";
 
 const triggerVariants = cva(
-  "has-icon inline-flex h-8 min-w-50 not-disabled:cursor-pointer items-center gap-1.5 rounded-md border bg-base-100 px-3 icon:text-content-400 text-content-200 text-sm outline-none transition-all",
+  "has-icon inline-flex h-8 min-w-50 not-disabled:cursor-pointer items-center gap-1.5 rounded-md border bg-base-100 px-3 icon:text-content-400 text-content-100 text-sm outline-none transition-all",
   {
     variants: {
       error: {
         true: "border-error focus-visible:ring-3 focus-visible:ring-error/10 data-[open=true]:ring-3 data-[open=true]:ring-error/10",
         false:
-          "border-content-400/50 focus-visible:border-primary-500 focus-visible:ring-3 focus-visible:ring-primary-500/10 data-[open=true]:border-primary-500 data-[open=true]:ring-3 data-[open=true]:ring-primary-500/10",
+          "border-base-400 focus-visible:border-primary-500 focus-visible:ring-3 focus-visible:ring-primary-500/10 data-[open=true]:border-primary-500 data-[open=true]:ring-3 data-[open=true]:ring-primary-500/10",
       },
       disabled: {
         true: "opacity-40",
@@ -223,7 +223,7 @@ export default function Select<T = unknown>({
             >
               <div
                 style={{ ...transitionStyles, maxHeight: "inherit" }}
-                className="flex flex-col overflow-y-auto rounded-md border border-content-400/30 bg-base-400 p-1 text-content-200 text-sm shadow-lg"
+                className="flex flex-col overflow-y-auto rounded-md border border-base-400 bg-base-100 p-1 text-content-100 text-sm shadow-lg"
               >
                 {options.length === 0 && (
                   <div className="px-2 py-2 text-content-400 text-xs">
@@ -243,7 +243,7 @@ export default function Select<T = unknown>({
                     data-active={activeIndex === i}
                     className={cn(
                       "flex h-7 shrink-0 cursor-pointer items-center gap-2 rounded-sm px-2 outline-none transition-colors",
-                      "data-[active=true]:bg-content-400/50 data-[active=true]:text-content-100",
+                      "data-[active=true]:bg-base-300 data-[active=true]:text-content-100",
                       "aria-disabled:cursor-not-allowed aria-disabled:opacity-40",
                     )}
                     {...getItemProps({
@@ -265,7 +265,7 @@ export default function Select<T = unknown>({
                   >
                     <span className="flex-1 truncate">{opt.label}</span>
                     {opt.value === value && (
-                      <CheckIcon className="size-3.5 text-content-200" />
+                      <CheckIcon className="size-3.5 text-content-100" />
                     )}
                   </div>
                 ))}

@@ -14,7 +14,7 @@ const ToggleGroupContext = createContext<ToggleGroupContextValue | null>(null);
 const visualVariants = cva(
   cn(
     "has-icon inline-flex select-none items-center justify-center gap-1.5 whitespace-nowrap rounded-full border transition-colors",
-    "border-content-400/40 bg-base-300 text-content-100",
+    "border-base-400 bg-base-100 text-content-100",
     "peer-not-disabled:peer-not-checked:hover:bg-base-400",
     "peer-checked:border-(--active-color) peer-checked:bg-(--active-color)/10 peer-checked:text-(--active-color)",
     "peer-focus-visible:ring-(--active-color)/20 peer-focus-visible:ring-3",

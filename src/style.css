@@ -21,8 +21,8 @@
   --color-content-400: #44474f; /* disabled, placeholder */
   --color-success: #4ade80;
   --color-success-content: #003c2d;
-  --color-warning: #fbbf24;
-  --color-warning-content: #411e03;
+  --color-warning: #fb923c;
+  --color-warning-content: #431407;
   --color-error: #f87171;
   --color-error-content: #4d0218;
   --color-info: #60a5fa;
@@ -83,8 +83,34 @@
   }
 }
 
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  --color-primary-400: #f7ad33; /* hover, highlight */
+  --color-primary-500: #e08e04; /* action, branding */
+  --color-primary-600: #c47a00; /* pressed, activity */
+  --color-primary-content: #fff7f1; /* text on primary */
+  --color-base-100: #ffffff; /* background */
+  --color-base-200: #f7f8fa; /* main area */
+  --color-base-300: #eff1f4; /* card, panel */
+  --color-base-400: #e6e9ee; /* modal, menu */
+  --color-content-100: #191c22; /* title, important */
+  --color-content-200: #4d5260; /* base content */
+  --color-content-300: #767c8a; /* description */
+  --color-content-400: #b6bac3; /* disabled, placeholder */
+  --color-success: #16a34a;
+  --color-success-content: #f0fdf4;
+  --color-warning: #ea580c;
+  --color-warning-content: #fff7ed;
+  --color-error: #dc2626;
+  --color-error-content: #fef2f2;
+  --color-info: #2563eb;
+  --color-info-content: #eff6ff;
+}
+
 :root {
-  @apply bg-base-100 text-content-100;
+  @apply bg-base-200 text-content-100;
+  color-scheme: dark;
   scrollbar-gutter: stable;
   scrollbar-width: thin;
   scrollbar-color: color-mix(in srgb, var(--color-content-100), transparent 70%)

@@ -15,7 +15,7 @@ import { cn } from "@/utils/cn";
 import Button from "./button";
 
 const contentVariants = cva(
-  "relative flex max-h-[calc(100vh-2rem)] w-full flex-col rounded-lg border border-content-400/30 bg-base-300 p-6 shadow-lg outline-none",
+  "relative flex max-h-[calc(100vh-2rem)] w-full flex-col rounded-lg border border-base-200 bg-base-100 p-6 shadow-lg outline-none",
   {
     variants: {
       size: {
@@ -126,7 +126,7 @@ export default function Dialog({
             {children && (
               <div
                 className={cn(
-                  "min-h-0 overflow-y-auto text-content-200 text-sm",
+                  "min-h-0 overflow-y-auto text-content-100 text-sm",
                   (title || description) && "mt-4",
                 )}
               >

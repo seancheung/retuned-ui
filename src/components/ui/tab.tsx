@@ -65,7 +65,7 @@ export default function Tabs<T extends string | number = string>({
     <div
       role="tablist"
       className={cn(
-        "flex items-center gap-1 border-content-400/30 border-b",
+        "flex items-center gap-1 border-base-400 border-b",
         className,
       )}
       {...props}

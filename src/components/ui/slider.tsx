@@ -1,7 +1,7 @@
 import { cva, type VariantProps } from "class-variance-authority";
 
 const variants = cva(
-  "not-disabled:cursor-pointer appearance-none rounded-xs bg-base-100 outline-none disabled:opacity-40 [&::-webkit-slider-thumb]:size-3 not-disabled:[&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-primary-500 [&::-webkit-slider-thumb]:transition-colors not-disabled:hover:[&::-webkit-slider-thumb]:ring-3 not-disabled:hover:[&::-webkit-slider-thumb]:ring-primary-500/10 not-disabled:active:[&::-webkit-slider-thumb]:bg-primary-600",
+  "not-disabled:cursor-pointer appearance-none rounded-xs bg-base-400 outline-none disabled:opacity-40 [&::-webkit-slider-thumb]:size-3 not-disabled:[&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-primary-500 [&::-webkit-slider-thumb]:transition-colors not-disabled:hover:[&::-webkit-slider-thumb]:ring-3 not-disabled:hover:[&::-webkit-slider-thumb]:ring-primary-500/10 not-disabled:active:[&::-webkit-slider-thumb]:bg-primary-600",
   {
     variants: {
       direction: {

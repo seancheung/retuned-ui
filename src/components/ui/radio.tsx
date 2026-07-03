@@ -12,7 +12,7 @@ type RadioGroupContextValue = {
 const RadioGroupContext = createContext<RadioGroupContextValue | null>(null);
 
 const variants = cva(
-  "inline-flex select-none items-center gap-2 text-content-200 text-sm",
+  "inline-flex select-none items-center gap-2 text-content-100 text-sm",
   {
     variants: {
       disabled: {
@@ -84,7 +84,7 @@ export default function Radio({
       />
       <span
         className={cn(
-          "inline-flex size-3.5 shrink-0 items-center justify-center rounded-full border border-content-400/60 bg-base-100 transition-colors",
+          "inline-flex size-3.5 shrink-0 items-center justify-center rounded-full border border-base-400 bg-base-100 transition-colors",
           "peer-checked:border-primary-500",
           "peer-focus-visible:ring-3 peer-focus-visible:ring-primary-500/20",
           "[&>span]:size-1.5 [&>span]:scale-0 [&>span]:rounded-full [&>span]:bg-primary-500 [&>span]:transition-transform peer-checked:[&>span]:scale-100",

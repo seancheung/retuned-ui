@@ -52,13 +52,13 @@ export function hasSubmenu(item: MenuItem): item is MenuItemSubmenu {
 }
 
 export const menuPanelClass = cn(
-  "flex min-w-40 flex-col rounded-md border border-content-400/30 bg-base-400 p-1 text-content-200 text-sm shadow-lg",
+  "flex min-w-40 flex-col rounded-md border border-base-200 bg-base-100 p-1 text-content-100 text-sm shadow-lg",
 );
 export const menuPanelCompactClass = cn("min-w-30 p-0.5 text-xs");
 
 export const menuItemClass = cn(
   "has-icon-3.5 flex h-7 icon:shrink-0 cursor-pointer items-center gap-2 rounded-sm px-2 outline-none transition-colors",
-  "data-[active=true]:bg-content-400/50 data-[active=true]:text-content-100",
+  "data-[active=true]:bg-base-300 data-[active=true]:text-content-100",
   "aria-disabled:cursor-not-allowed aria-disabled:opacity-40",
   "data-[danger=true]:text-error",
   "data-[danger=true]:data-[active=true]:bg-error/15 data-[danger=true]:data-[active=true]:text-error",
@@ -93,7 +93,7 @@ export function MenuItems({
           return (
             <hr
               key={item.key ?? `sep-${i}`}
-              className="my-1 h-px border-0 bg-content-400/20"
+              className="my-1 h-px border-0 bg-base-200"
             />
           );
         }

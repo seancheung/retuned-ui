@@ -4,7 +4,7 @@ import { cn } from "@/utils/cn";
 
 const variants = cva(
   cn(
-    "relative inline-flex shrink-0 select-none items-center justify-center rounded-full bg-base-100 text-(--knob-color) shadow outline-none transition-colors",
+    "relative inline-flex shrink-0 select-none items-center justify-center rounded-full border border-base-300 bg-base-100 text-(--knob-color) shadow outline-none transition-colors",
     "cursor-grab active:cursor-grabbing",
     "focus-visible:ring-(--knob-color)/20 focus-visible:ring-3",
     "aria-disabled:cursor-not-allowed aria-disabled:opacity-40",

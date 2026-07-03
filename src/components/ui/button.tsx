@@ -10,11 +10,11 @@ const variants = cva(
         primary:
           "bg-primary-500 text-primary-content not-disabled:hover:bg-primary-400 not-disabled:active:bg-primary-600",
         secondary:
-          "border-content-400/40 bg-base-300 text-content-100 not-disabled:hover:bg-base-400 not-disabled:active:bg-base-400/50",
+          "border-base-400 bg-base-100 text-content-100 not-disabled:hover:bg-base-300 not-disabled:active:bg-base-400/50",
         ghost:
-          "bg-transparent text-content-200 not-disabled:hover:bg-base-400 not-disabled:hover:text-content-100 not-disabled:active:bg-base-400/50",
+          "bg-transparent text-content-100 not-disabled:hover:bg-base-300 not-disabled:hover:text-content-100 not-disabled:active:bg-base-400/50",
         danger:
-          "border-content-400/40 bg-transparent text-error not-disabled:hover:border-error not-disabled:hover:bg-error/10 not-disabled:active:bg-error/20",
+          "border-error/40 bg-transparent text-error not-disabled:hover:border-error not-disabled:hover:bg-error/10 not-disabled:active:bg-error/20",
       },
       size: {
         lg: "text-base",

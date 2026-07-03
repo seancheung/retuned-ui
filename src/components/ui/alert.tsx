@@ -65,7 +65,7 @@ export default function Alert({
         {title && (
           <div className="mb-0.5 font-semibold text-content-100">{title}</div>
         )}
-        {children && <div className="text-content-200">{children}</div>}
+        {children && <div className="text-content-100">{children}</div>}
       </div>
     </div>
   );

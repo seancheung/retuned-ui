@@ -109,7 +109,7 @@ export default function Tooltip({
             <div
               style={transitionStyles}
               className={cn(
-                "relative max-w-xs rounded-md bg-base-400 px-2.5 py-1.5 text-content-200 text-xs shadow-lg",
+                "relative max-w-xs rounded-md bg-content-100 px-2.5 py-1.5 text-base-100 text-xs shadow-lg",
                 className,
               )}
             >
@@ -119,7 +119,7 @@ export default function Tooltip({
                 context={context}
                 width={10}
                 height={5}
-                className="fill-base-400"
+                className="fill-content-100"
               />
             </div>
           </div>

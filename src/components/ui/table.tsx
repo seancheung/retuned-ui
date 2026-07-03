@@ -2,7 +2,7 @@ import { cn } from "@/utils/cn";
 
 export function Table({ className, ...props }: React.ComponentProps<"table">) {
   return (
-    <div className="overflow-x-auto rounded-lg border border-content-400/20 bg-base-200">
+    <div className="overflow-x-auto rounded-lg border border-base-400 bg-base-100">
       <table
         className={cn("w-full caption-bottom text-sm", className)}
         {...props}
@@ -18,7 +18,7 @@ export function TableHeader({
   return (
     <thead
       className={cn(
-        "border-content-400/15 border-b bg-base-300/50 [&>tr]:border-b-0",
+        "border-base-300 border-b bg-base-200 [&>tr]:border-b-0",
         className,
       )}
       {...props}
@@ -33,7 +33,7 @@ export function TableBody({
   return (
     <tbody
       className={cn(
-        "[&>tr:last-child]:border-b-0 [&>tr]:border-content-400/15 [&>tr]:border-b",
+        "[&>tr:last-child]:border-b-0 [&>tr]:border-base-300 [&>tr]:border-b",
         className,
       )}
       {...props}
@@ -48,7 +48,7 @@ export function TableFooter({
   return (
     <tfoot
       className={cn(
-        "border-content-400/15 border-t bg-base-300/30 font-medium",
+        "border-base-300 border-t bg-base-200 font-medium",
         className,
       )}
       {...props}
@@ -60,7 +60,7 @@ export function TableRow({ className, ...props }: React.ComponentProps<"tr">) {
   return (
     <tr
       className={cn(
-        "transition-colors hover:bg-base-300/40 data-[state=selected]:bg-base-300/60",
+        "transition-colors hover:bg-base-200 data-[state=selected]:bg-base-300",
         className,
       )}
       {...props}
@@ -83,7 +83,7 @@ export function TableHead({ className, ...props }: React.ComponentProps<"th">) {
 export function TableCell({ className, ...props }: React.ComponentProps<"td">) {
   return (
     <td
-      className={cn("px-4 py-3 align-middle text-content-200", className)}
+      className={cn("px-4 py-3 align-middle text-content-100", className)}
       {...props}
     />
   );
@@ -95,7 +95,7 @@ export function TableCaption({
 }: React.ComponentProps<"caption">) {
   return (
     <caption
-      className={cn("mt-4 text-content-400 text-xs", className)}
+      className={cn("my-4 text-content-400 text-xs", className)}
       {...props}
     />
   );

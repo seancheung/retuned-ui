@@ -15,7 +15,7 @@ import { cn } from "@/utils/cn";
 import Button from "./button";
 
 const contentVariants = cva(
-  "fixed flex max-h-full max-w-full flex-col border-content-400/30 bg-base-100 shadow-lg outline-none",
+  "fixed flex max-h-full max-w-full flex-col border-base-200 bg-base-100 shadow-lg outline-none",
   {
     variants: {
       side: {
@@ -133,7 +133,7 @@ export default function Drawer({
             {...getFloatingProps()}
           >
             {hasHeader && (
-              <div className="relative shrink-0 border-content-400/30 border-b bg-base-200 p-4">
+              <div className="relative shrink-0 border-base-200 border-b p-4">
                 {closable && (
                   <Button
                     variant="ghost"
@@ -162,12 +162,12 @@ export default function Drawer({
               </div>
             )}
             {children && (
-              <div className="flex-1 overflow-y-auto p-4 text-content-200 text-sm">
+              <div className="flex-1 overflow-y-auto p-4 text-content-100 text-sm">
                 {children}
               </div>
             )}
             {footer && (
-              <div className="flex shrink-0 justify-end gap-2 border-content-400/30 border-t p-4">
+              <div className="flex shrink-0 justify-end gap-2 border-base-200 border-t p-4">
                 {footer}
               </div>
             )}
