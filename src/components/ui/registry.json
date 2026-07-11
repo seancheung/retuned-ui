@@ -266,6 +266,21 @@
       ]
     },
     {
+      "name": "segmented-control",
+      "type": "registry:item",
+      "title": "Segmented Control",
+      "description": "A segmented control with an animated sliding thumb, primary and secondary variants, multiple sizes and per-item disabled state.",
+      "dependencies": ["class-variance-authority", "motion"],
+      "registryDependencies": ["seancheung/retuned-ui/setup"],
+      "files": [
+        {
+          "path": "segmented-control.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/segmented-control.tsx"
+        }
+      ]
+    },
+    {
       "name": "select",
       "type": "registry:item",
       "title": "Select",

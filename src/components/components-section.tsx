@@ -14,6 +14,7 @@ import InputPasswordDemo from "@/components/input-password-demo";
 import KnobDemo from "@/components/knob-demo";
 import ProgressDemo from "@/components/progress-demo";
 import RadioDemo from "@/components/radio-demo";
+import SegmentedControlDemo from "@/components/segmented-control-demo";
 import SelectDemo from "@/components/select-demo";
 import SkeletonDemo from "@/components/skeleton-demo";
 import SliderDemo from "@/components/slider-demo";
@@ -47,6 +48,7 @@ export default function ComponentsSection() {
         <RadioDemo />
         <SwitchDemo />
         <TabDemo />
+        <SegmentedControlDemo />
         <InputNumberDemo />
         <InputPasswordDemo />
         <KnobDemo />
