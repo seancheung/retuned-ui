@@ -7,18 +7,18 @@
   --font-sans: "Geist Variable", sans-serif;
   --font-mono: "Geist Mono Variable", monospace;
 
-  --color-primary-400: #ffc055; /* hover, highlight */
-  --color-primary-500: #f5a524; /* action, branding */
-  --color-primary-600: #e89006; /* pressed, activity */
-  --color-primary-content: #411e03; /* text on primary */
-  --color-base-100: #0c0d10; /* background */
-  --color-base-200: #14161c; /* main area */
-  --color-base-300: #1b1e26; /* card, panel */
-  --color-base-400: #242833; /* modal, menu */
-  --color-content-100: #eceef2; /* title, important */
-  --color-content-200: #a8adb8; /* base content */
-  --color-content-300: #6c7180; /* description */
-  --color-content-400: #44474f; /* disabled, placeholder */
+  --color-primary-400: #ffc055;
+  --color-primary-500: #f5a524;
+  --color-primary-600: #e89006;
+  --color-primary-content: #411e03;
+  --color-base-100: #0c0d10;
+  --color-base-200: #14161c;
+  --color-base-300: #1b1e26;
+  --color-base-400: #242833;
+  --color-content-100: #eceef2;
+  --color-content-200: #a8adb8;
+  --color-content-300: #6c7180;
+  --color-content-400: #44474f;
   --color-success: #4ade80;
   --color-success-content: #003c2d;
   --color-warning: #fb923c;
@@ -28,33 +28,33 @@
   --color-info: #60a5fa;
   --color-info-content: #042e49;
 
-  --text-3xl: 40px; /* display */
+  --text-3xl: 40px;
   --text-3xl--line-height: calc(44 / 40);
   --text-3xl--letter-spacing: -0.03em;
   --text-3xl--font-weight: 700;
-  --text-2xl: 22px; /* h1 */
+  --text-2xl: 22px;
   --text-2xl--line-height: calc(29 / 22);
   --text-2xl--letter-spacing: -0.02em;
   --text-2xl--font-weight: 600;
-  --text-xl: 18px; /* h2 */
+  --text-xl: 18px;
   --text-xl--line-height: calc(24 / 18);
   --text-xl--font-weight: 600;
-  --text-lg: 14px; /* h3 */
+  --text-lg: 14px;
   --text-lg--line-height: calc(20 / 14);
   --text-lg--font-weight: 600;
-  --text-base: 13px; /* body */
+  --text-base: 13px;
   --text-base--line-height: calc(20 / 13);
   --text-base--font-weight: 400;
-  --text-sm: 12px; /* label */
+  --text-sm: 12px;
   --text-sm--line-height: calc(17 / 12);
   --text-sm--font-weight: 500;
-  --text-xs: 11px; /* caption */
+  --text-xs: 11px;
   --text-xs--line-height: calc(15 / 11);
   --text-xs--font-weight: 400;
-  --text-tiny: 10px; /* badge */
+  --text-tiny: 10px;
   --text-tiny--line-height: calc(15 / 10);
   --text-tiny--font-weight: 400;
-  --text-micro: 9px; /* dense timeline / meter labels */
+  --text-micro: 9px;
   --text-micro--line-height: calc(12 / 9);
   --text-micro--font-weight: 400;
 
@@ -86,18 +86,18 @@
 :root[data-theme="light"] {
   color-scheme: light;
 
-  --color-primary-400: #f7ad33; /* hover, highlight */
-  --color-primary-500: #e08e04; /* action, branding */
-  --color-primary-600: #c47a00; /* pressed, activity */
-  --color-primary-content: #fff7f1; /* text on primary */
-  --color-base-100: #ffffff; /* background */
-  --color-base-200: #f7f8fa; /* main area */
-  --color-base-300: #eff1f4; /* card, panel */
-  --color-base-400: #e6e9ee; /* modal, menu */
-  --color-content-100: #191c22; /* title, important */
-  --color-content-200: #4d5260; /* base content */
-  --color-content-300: #767c8a; /* description */
-  --color-content-400: #b6bac3; /* disabled, placeholder */
+  --color-primary-400: #f7ad33;
+  --color-primary-500: #e08e04;
+  --color-primary-600: #c47a00;
+  --color-primary-content: #fff7f1;
+  --color-base-100: #ffffff;
+  --color-base-200: #f7f8fa;
+  --color-base-300: #eff1f4;
+  --color-base-400: #e6e9ee;
+  --color-content-100: #191c22;
+  --color-content-200: #4d5260;
+  --color-content-300: #767c8a;
+  --color-content-400: #b6bac3;
   --color-success: #16a34a;
   --color-success-content: #f0fdf4;
   --color-warning: #ea580c;
