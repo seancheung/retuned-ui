@@ -60,6 +60,7 @@ export type SelectProps<T = unknown> = Omit<
     icon?: React.ReactNode;
     clearable?: boolean;
     onClear?: () => void;
+    renderOption?: (option: SelectOption<T>) => React.ReactNode;
   };
 
 export default function Select<T = unknown>({
@@ -75,6 +76,7 @@ export default function Select<T = unknown>({
   className,
   clearable,
   onClear,
+  renderOption,
   ...props
 }: SelectProps<T>) {
   const [internalValue, setInternalValue] = useState<T | undefined>(
@@ -263,7 +265,11 @@ export default function Select<T = unknown>({
                       },
                     })}
                   >
-                    <span className="flex-1 truncate">{opt.label}</span>
+                    {renderOption && opt ? (
+                      renderOption(opt)
+                    ) : (
+                      <span className="flex-1 truncate">{opt.label}</span>
+                    )}
                     {opt.value === value && (
                       <CheckIcon className="size-3.5 text-content-100" />
                     )}

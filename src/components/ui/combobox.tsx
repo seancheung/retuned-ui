@@ -70,6 +70,7 @@ export type ComboboxProps<T = unknown> = Omit<
     hasMore?: boolean;
     isFetchingMore?: boolean;
     onLoadMore?: () => void;
+    renderOption?: (option: ComboboxOption<T>) => React.ReactNode;
   };
 
 type RenderItem<T> =
@@ -93,6 +94,7 @@ export default function Combobox<T = unknown>({
   hasMore = false,
   isFetchingMore = false,
   onLoadMore,
+  renderOption,
   error,
   disabled,
   className,
@@ -275,6 +277,7 @@ export default function Combobox<T = unknown>({
         <input
           {...props}
           type="text"
+          role="combobox"
           value={inputValue}
           placeholder={placeholder}
           disabled={disabled}
@@ -407,7 +410,11 @@ export default function Combobox<T = unknown>({
                       </>
                     ) : (
                       <>
-                        <span className="flex-1 truncate">{opt?.label}</span>
+                        {renderOption && opt ? (
+                          renderOption(opt)
+                        ) : (
+                          <span className="flex-1 truncate">{opt?.label}</span>
+                        )}
                         {opt?.value === value && (
                           <CheckIcon className="size-3.5 text-content-200" />
                         )}

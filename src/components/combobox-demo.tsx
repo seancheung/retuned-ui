@@ -1,4 +1,4 @@
-import { MicIcon } from "lucide-react";
+import { Mic2Icon, MicIcon } from "lucide-react";
 import { useEffect, useState } from "react";
 import { ComponentGroup, ComponentRow, voiceOptions } from "@/components/demo";
 import Combobox from "@/components/ui/combobox";
@@ -17,6 +17,21 @@ export default function ComboboxDemo() {
           options={voiceOptions}
           defaultValue="nova"
           icon={<MicIcon />}
+        />
+      </ComponentRow>
+      <ComponentRow title="Renderer">
+        <Combobox
+          options={voiceOptions}
+          defaultValue="nova"
+          icon={<MicIcon />}
+          renderOption={(o) => (
+            <span className="flex min-w-0 flex-1 items-center gap-2">
+              <span className="shrink-0 text-content-300">
+                <Mic2Icon className="size-3.5" />
+              </span>
+              <span className="truncate">{o.label}</span>
+            </span>
+          )}
         />
       </ComponentRow>
       <ComponentRow title="Custom">
