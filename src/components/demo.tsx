@@ -36,8 +36,16 @@ export function ComponentGroup({
   title: React.ReactNode;
   children: React.ReactNode;
 }) {
+  const isNamed = typeof title === "string";
+  const id = isNamed
+    ? `demo-${title.toLowerCase().replace(/\s+/g, "-")}`
+    : undefined;
   return (
-    <div className="rounded-lg border border-base-400 bg-base-100 p-6">
+    <div
+      id={id}
+      data-demo-group={isNamed ? title : undefined}
+      className="scroll-mt-6 rounded-lg border border-base-400 bg-base-100 p-6"
+    >
       <div className="mb-5 flex items-center gap-2 font-semibold text-content-300 text-sm uppercase tracking-wider">
         <span className="h-1 w-1 rounded-full bg-primary-500" />
         {title}
