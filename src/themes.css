@@ -10,6 +10,9 @@
   --radius-sm: 0px;
   --radius-md: 0px;
   --radius-lg: 0px;
+
+  --shadow-raised: 0 0 0 0 transparent;
+  --color-ring: transparent;
 }
 
 :root[data-style="violet"][data-theme="light"] {
