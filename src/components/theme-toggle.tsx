@@ -7,11 +7,12 @@ const STORAGE_KEY = "retuned-theme";
 
 export default function ThemeToggle() {
   const [theme, setTheme] = useState<"dark" | "light">(() =>
-    localStorage.getItem(STORAGE_KEY) === "light" ? "light" : "dark",
+    localStorage.getItem(STORAGE_KEY) === "dark" ? "dark" : "light",
   );
 
   useEffect(() => {
-    document.documentElement.dataset.theme = theme;
+    if (theme === "light") delete document.documentElement.dataset.theme;
+    else document.documentElement.dataset.theme = theme;
     localStorage.setItem(STORAGE_KEY, theme);
   }, [theme]);
 
