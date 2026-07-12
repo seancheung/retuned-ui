@@ -6,6 +6,7 @@ import CheckboxDemo from "@/components/checkbox-demo";
 import CollapsibleDemo from "@/components/collapsible-demo";
 import ComboboxDemo from "@/components/combobox-demo";
 import ContextMenuDemo from "@/components/context-menu-demo";
+import DatePickerDemo from "@/components/date-picker-demo";
 import { SectionHeader } from "@/components/demo";
 import DialogDemo from "@/components/dialog-demo";
 import DrawerDemo from "@/components/drawer-demo";
@@ -47,6 +48,7 @@ export default function ComponentsSection() {
         <MultiSelectDemo />
         <ComboboxDemo />
         <MultiComboboxDemo />
+        <DatePickerDemo />
         <CheckboxDemo />
         <RadioDemo />
         <SwitchDemo />

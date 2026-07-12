@@ -129,6 +129,25 @@
       ]
     },
     {
+      "name": "date-picker",
+      "type": "registry:item",
+      "title": "Date Picker",
+      "description": "A date picker with a floating calendar, month and year navigation, locale-aware labels, min/max range limits, clearable selection, and error and disabled states.",
+      "dependencies": [
+        "@floating-ui/react",
+        "class-variance-authority",
+        "lucide-react"
+      ],
+      "registryDependencies": ["seancheung/retuned-ui/setup"],
+      "files": [
+        {
+          "path": "date-picker.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/date-picker.tsx"
+        }
+      ]
+    },
+    {
       "name": "dialog",
       "type": "registry:item",
       "title": "Dialog",
