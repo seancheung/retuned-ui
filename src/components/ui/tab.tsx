@@ -1,3 +1,5 @@
+"use client";
+
 import { cva, type VariantProps } from "class-variance-authority";
 import { motion } from "motion/react";
 import { useId, useState } from "react";

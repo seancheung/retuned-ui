@@ -5,7 +5,7 @@
       "name": "accordion",
       "type": "registry:item",
       "title": "Accordion",
-      "description": "A single-expand accordion with animated transitions, optional per-item icons, borderless mode and disabled items.",
+      "description": "An accordion with single or multiple expand modes, animated transitions, optional per-item icons, borderless mode and disabled items.",
       "dependencies": ["class-variance-authority", "lucide-react", "motion"],
       "registryDependencies": ["seancheung/retuned-ui/setup"],
       "files": [
@@ -62,10 +62,25 @@
       ]
     },
     {
+      "name": "calendar",
+      "type": "registry:item",
+      "title": "Calendar",
+      "description": "A standalone month calendar with month and year navigation, locale-aware labels and week start, min/max range limits and a Today shortcut.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["seancheung/retuned-ui/setup"],
+      "files": [
+        {
+          "path": "calendar.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/calendar.tsx"
+        }
+      ]
+    },
+    {
       "name": "checkbox",
       "type": "registry:item",
       "title": "Checkbox",
-      "description": "A checkbox with a built-in label, three sizes, controlled and uncontrolled usage and a disabled state.",
+      "description": "A checkbox with a built-in label, three sizes, an indeterminate state, controlled and uncontrolled usage and a disabled state.",
       "dependencies": ["class-variance-authority", "lucide-react"],
       "registryDependencies": ["seancheung/retuned-ui/setup"],
       "files": [
@@ -138,7 +153,10 @@
         "class-variance-authority",
         "lucide-react"
       ],
-      "registryDependencies": ["seancheung/retuned-ui/setup"],
+      "registryDependencies": [
+        "seancheung/retuned-ui/setup",
+        "seancheung/retuned-ui/calendar"
+      ],
       "files": [
         {
           "path": "date-picker.tsx",
@@ -527,7 +545,7 @@
       "name": "toast",
       "type": "registry:item",
       "title": "Toast",
-      "description": "Animated toast notifications with semantic variants, action buttons, custom duration and an imperative toast() API plus a Toaster outlet.",
+      "description": "Animated toast notifications with semantic variants, action buttons, custom duration, pause on hover and an imperative toast() API plus a Toaster outlet.",
       "dependencies": ["class-variance-authority", "lucide-react", "motion"],
       "registryDependencies": [
         "seancheung/retuned-ui/setup",

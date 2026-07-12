@@ -2,6 +2,7 @@ import AccordionDemo from "@/components/accordion-demo";
 import AlertDemo from "@/components/alert-demo";
 import BadgeDemo from "@/components/badge-demo";
 import ButtonDemo from "@/components/button-demo";
+import CalendarDemo from "@/components/calendar-demo";
 import CheckboxDemo from "@/components/checkbox-demo";
 import CollapsibleDemo from "@/components/collapsible-demo";
 import ComboboxDemo from "@/components/combobox-demo";
@@ -51,6 +52,7 @@ export default function ComponentsSection() {
         <MultiComboboxDemo />
         <DatePickerDemo />
         <TimePickerDemo />
+        <CalendarDemo />
         <CheckboxDemo />
         <RadioDemo />
         <SwitchDemo />

@@ -1,3 +1,5 @@
+"use client";
+
 import { cva, type VariantProps } from "class-variance-authority";
 import { ChevronDownIcon } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
@@ -33,13 +35,29 @@ export type AccordionProps<T extends string | number = string> = Omit<
 > &
   VariantProps<typeof variants> & {
     items: AccordionItem<T>[];
-    value?: T | null;
-    defaultValue?: T;
-    onChange?: (value: T | null) => void;
-  };
+  } & (
+    | {
+        multiple?: false;
+        value?: T | null;
+        defaultValue?: T;
+        onChange?: (value: T | null) => void;
+      }
+    | {
+        multiple: true;
+        value?: T[];
+        defaultValue?: T[];
+        onChange?: (values: T[]) => void;
+      }
+  );
+
+function toArray<T>(value: T | null | T[] | undefined): T[] {
+  if (value === null || value === undefined) return [];
+  return Array.isArray(value) ? value : [value];
+}
 
 export default function Accordion<T extends string | number = string>({
   items,
+  multiple = false,
   value: controlledValue,
   defaultValue,
   onChange,
@@ -47,22 +65,30 @@ export default function Accordion<T extends string | number = string>({
   className,
   ...props
 }: AccordionProps<T>) {
-  const [internal, setInternal] = useState<T | null>(defaultValue ?? null);
+  const [internal, setInternal] = useState<T[]>(() => toArray(defaultValue));
   const isControlled = controlledValue !== undefined;
-  const current = isControlled ? controlledValue : internal;
+  const current = isControlled ? toArray(controlledValue) : internal;
   const baseId = useId();
 
   function handleToggle(item: AccordionItem<T>) {
     if (item.disabled) return;
-    const next = current === item.value ? null : item.value;
+    const isOpen = current.includes(item.value);
+    const next = multiple
+      ? isOpen
+        ? current.filter((v) => v !== item.value)
+        : [...current, item.value]
+      : isOpen
+        ? []
+        : [item.value];
     if (!isControlled) setInternal(next);
-    onChange?.(next);
+    const emit = onChange as ((value: T | null | T[]) => void) | undefined;
+    emit?.(multiple ? next : (next[0] ?? null));
   }
 
   return (
     <div className={cn(variants({ className, bordered }))} {...props}>
       {items.map((item, i) => {
-        const open = current === item.value && !item.disabled;
+        const open = current.includes(item.value) && !item.disabled;
         const triggerId = `${baseId}-trigger-${i}`;
         const contentId = `${baseId}-content-${i}`;
         return (

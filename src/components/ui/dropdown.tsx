@@ -1,3 +1,5 @@
+"use client";
+
 import {
   autoUpdate,
   FloatingFocusManager,
@@ -26,6 +28,7 @@ import {
   MenuItems,
   menuPanelClass,
   menuPanelCompactClass,
+  menuSizeMiddleware,
 } from "./menu";
 
 export type DropdownItem = MenuItem;
@@ -80,7 +83,12 @@ function DropdownInner({
     onOpenChange: setOpen,
     placement,
     whileElementsMounted: autoUpdate,
-    middleware: [offset(6), flip({ padding: 8 }), shift({ padding: 8 })],
+    middleware: [
+      offset(6),
+      flip({ padding: 8 }),
+      shift({ padding: 8 }),
+      menuSizeMiddleware(),
+    ],
   });
 
   const listRef = useRef<Array<HTMLElement | null>>([]);
@@ -147,7 +155,7 @@ function DropdownInner({
                 {...getFloatingProps()}
               >
                 <div
-                  style={transitionStyles}
+                  style={{ ...transitionStyles, maxHeight: "inherit" }}
                   className={cn(
                     menuPanelClass,
                     compact && menuPanelCompactClass,

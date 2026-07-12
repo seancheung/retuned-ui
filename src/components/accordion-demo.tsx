@@ -17,6 +17,14 @@ export default function AccordionDemo() {
       <ComponentRow title="Open">
         <Accordion items={chapters} defaultValue="voice" className="flex-1" />
       </ComponentRow>
+      <ComponentRow title="Multiple">
+        <Accordion
+          items={chapters}
+          multiple
+          defaultValue={["intro", "export"]}
+          className="flex-1"
+        />
+      </ComponentRow>
       <ComponentRow title="Icon">
         <Accordion
           items={[

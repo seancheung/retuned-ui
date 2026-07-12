@@ -1,9 +1,12 @@
+"use client";
+
 import {
   autoUpdate,
   FloatingFocusManager,
   FloatingNode,
   FloatingPortal,
   flip,
+  size as floatingSize,
   offset,
   safePolygon,
   shift,
@@ -52,12 +55,22 @@ export function hasSubmenu(item: MenuItem): item is MenuItemSubmenu {
 }
 
 export const menuPanelClass = cn(
-  "flex min-w-40 flex-col rounded-md border border-base-200 bg-base-100 p-1 text-content-100 text-sm shadow-(--shadow-overlay)",
+  "flex min-w-40 flex-col overflow-y-auto rounded-md border border-base-200 bg-base-100 p-1 text-content-100 text-sm shadow-(--shadow-overlay)",
 );
+
+export const menuSizeMiddleware = () =>
+  floatingSize({
+    apply({ elements, availableHeight }) {
+      Object.assign(elements.floating.style, {
+        maxHeight: `${Math.max(availableHeight - 8, 0)}px`,
+      });
+    },
+    padding: 8,
+  });
 export const menuPanelCompactClass = cn("min-w-30 p-0.5 text-xs");
 
 export const menuItemClass = cn(
-  "has-icon-3.5 flex h-7 icon:shrink-0 cursor-pointer items-center gap-2 rounded-sm px-2 outline-none transition-colors",
+  "has-icon-3.5 flex h-7 icon:shrink-0 shrink-0 cursor-pointer items-center gap-2 rounded-sm px-2 outline-none transition-colors",
   "data-[active=true]:bg-base-300 data-[active=true]:text-content-100",
   "aria-disabled:cursor-not-allowed aria-disabled:opacity-40",
   "data-[danger=true]:text-error",
@@ -185,6 +198,7 @@ function SubMenuTrigger({
       offset({ mainAxis: 4, alignmentAxis: -4 }),
       flip({ padding: 8 }),
       shift({ padding: 8 }),
+      menuSizeMiddleware(),
     ],
     whileElementsMounted: autoUpdate,
   });
@@ -282,7 +296,7 @@ function SubMenuTrigger({
               {...getFloatingProps()}
             >
               <div
-                style={transitionStyles}
+                style={{ ...transitionStyles, maxHeight: "inherit" }}
                 className={cn(menuPanelClass, compact && menuPanelCompactClass)}
               >
                 <MenuItems

@@ -1,3 +1,5 @@
+"use client";
+
 import {
   autoUpdate,
   FloatingFocusManager,
@@ -24,6 +26,7 @@ import {
   MenuItems,
   menuPanelClass,
   menuPanelCompactClass,
+  menuSizeMiddleware,
 } from "./menu";
 
 export type ContextMenuItem = MenuItem;
@@ -80,6 +83,7 @@ function ContextMenuInner({
       offset({ mainAxis: 0, crossAxis: 2 }),
       flip({ fallbackPlacements: ["left-start", "right-end", "left-end"] }),
       shift({ padding: 8 }),
+      menuSizeMiddleware(),
     ],
   });
 
@@ -175,7 +179,7 @@ function ContextMenuInner({
                 {...getFloatingProps()}
               >
                 <div
-                  style={transitionStyles}
+                  style={{ ...transitionStyles, maxHeight: "inherit" }}
                   className={cn(
                     menuPanelClass,
                     compact && menuPanelCompactClass,

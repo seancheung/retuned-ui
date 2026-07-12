@@ -1,5 +1,7 @@
+"use client";
+
 import { cva, type VariantProps } from "class-variance-authority";
-import { CheckIcon } from "lucide-react";
+import { CheckIcon, MinusIcon } from "lucide-react";
 import { cn } from "@/utils/cn";
 
 const variants = cva(
@@ -43,6 +45,8 @@ export type CheckboxProps = Omit<
     value?: boolean | null;
     defaultValue?: boolean;
     onChange?: (value: boolean) => void;
+    /** Display-only mixed state; value stays boolean (conventionally false) */
+    indeterminate?: boolean;
     label?: React.ReactNode;
   };
 
@@ -54,6 +58,7 @@ export default function Checkbox({
   value,
   defaultValue,
   onChange,
+  indeterminate = false,
   ...props
 }: CheckboxProps) {
   return (
@@ -61,9 +66,12 @@ export default function Checkbox({
       <input
         type="checkbox"
         disabled={disabled}
-        aria-checked={value === null ? false : value}
+        aria-checked={indeterminate ? "mixed" : value === null ? false : value}
         className="peer sr-only"
         {...props}
+        ref={(el) => {
+          if (el) el.indeterminate = indeterminate;
+        }}
         checked={value === null ? false : value}
         defaultChecked={defaultValue}
         onChange={(e) => onChange?.(e.target.checked)}
@@ -74,10 +82,15 @@ export default function Checkbox({
           "peer-checked:border-primary-500 peer-checked:bg-primary-500",
           "peer-focus-visible:ring-3 peer-focus-visible:ring-ring/20",
           "icon:scale-0 icon:text-primary-content icon:transition-transform peer-checked:icon:scale-100",
+          indeterminate && "icon:scale-100 border-primary-500 bg-primary-500",
           boxSizes[size ?? "md"],
         )}
       >
-        <CheckIcon strokeWidth={3} />
+        {indeterminate ? (
+          <MinusIcon strokeWidth={3} />
+        ) : (
+          <CheckIcon strokeWidth={3} />
+        )}
       </span>
       {label != null && <span>{label}</span>}
     </label>

@@ -1,3 +1,5 @@
+"use client";
+
 import { cva, type VariantProps } from "class-variance-authority";
 import { StarIcon } from "lucide-react";
 import { motion } from "motion/react";
