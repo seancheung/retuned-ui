@@ -326,7 +326,7 @@
       "name": "popover",
       "type": "registry:item",
       "title": "Popover",
-      "description": "A click-triggered floating panel for arbitrary content, positionable on any side of its trigger, with an optional title and a pointing arrow.",
+      "description": "A click-triggered floating panel for arbitrary content, positionable on any side of its trigger, with an optional title and an optional pointing arrow.",
       "dependencies": ["@floating-ui/react", "@radix-ui/react-slot"],
       "registryDependencies": ["seancheung/retuned-ui/setup"],
       "files": [

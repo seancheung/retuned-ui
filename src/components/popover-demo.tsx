@@ -16,6 +16,11 @@ export default function PopoverDemo() {
           <Button variant="secondary">带标题</Button>
         </Popover>
       </ComponentRow>
+      <ComponentRow title="Arrow">
+        <Popover content={SAMPLE} arrow>
+          <Button variant="secondary">带箭头</Button>
+        </Popover>
+      </ComponentRow>
       <ComponentRow title="Sides">
         <Popover content={SAMPLE} side="top">
           <Button variant="ghost">上</Button>

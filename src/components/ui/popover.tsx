@@ -24,6 +24,7 @@ export type PopoverProps = {
   title?: React.ReactNode;
   side?: "top" | "right" | "bottom" | "left";
   align?: "start" | "center" | "end";
+  arrow?: boolean;
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
   disabled?: boolean;
@@ -36,6 +37,7 @@ export default function Popover({
   title,
   side = "bottom",
   align = "center",
+  arrow = false,
   open: controlledOpen,
   onOpenChange,
   disabled,
@@ -63,7 +65,7 @@ export default function Popover({
       offset(8),
       flip({ padding: 8 }),
       shift({ padding: 8 }),
-      arrowMiddleware({ element: arrowRef, padding: 6 }),
+      ...(arrow ? [arrowMiddleware({ element: arrowRef, padding: 6 })] : []),
     ],
   });
 
@@ -112,15 +114,17 @@ export default function Popover({
                     ? content({ close: () => setOpen(false) })
                     : content}
                 </div>
-                <FloatingArrow
-                  ref={arrowRef}
-                  context={context}
-                  width={12}
-                  height={6}
-                  strokeWidth={1}
-                  stroke="var(--color-base-400)"
-                  className="fill-base-100"
-                />
+                {arrow && (
+                  <FloatingArrow
+                    ref={arrowRef}
+                    context={context}
+                    width={12}
+                    height={6}
+                    strokeWidth={1}
+                    stroke="var(--color-base-400)"
+                    className="fill-base-100"
+                  />
+                )}
               </div>
             </div>
           </FloatingFocusManager>
