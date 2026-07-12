@@ -18,6 +18,7 @@ import MultiComboboxDemo from "@/components/multi-combobox-demo";
 import MultiSelectDemo from "@/components/multi-select-demo";
 import ProgressDemo from "@/components/progress-demo";
 import RadioDemo from "@/components/radio-demo";
+import RatingDemo from "@/components/rating-demo";
 import SegmentedControlDemo from "@/components/segmented-control-demo";
 import SelectDemo from "@/components/select-demo";
 import SkeletonDemo from "@/components/skeleton-demo";
@@ -50,6 +51,7 @@ export default function ComponentsSection() {
         <SwitchDemo />
         <SliderDemo />
         <KnobDemo />
+        <RatingDemo />
         <SegmentedControlDemo />
         <TabDemo />
         <CollapsibleDemo />

@@ -334,6 +334,21 @@
       ]
     },
     {
+      "name": "rating",
+      "type": "registry:item",
+      "title": "Rating",
+      "description": "A star rating input with hover preview, a pop animation on select, configurable count, half-star precision, a customizable icon shape, three sizes, clearable selection, and read-only and disabled states.",
+      "dependencies": ["class-variance-authority", "lucide-react", "motion"],
+      "registryDependencies": ["seancheung/retuned-ui/setup"],
+      "files": [
+        {
+          "path": "rating.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/rating.tsx"
+        }
+      ]
+    },
+    {
       "name": "segmented-control",
       "type": "registry:item",
       "title": "Segmented Control",
