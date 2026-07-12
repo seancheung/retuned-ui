@@ -59,7 +59,7 @@ export default function InputPassword({
         {...props}
         type={visible ? "text" : "password"}
         disabled={disabled}
-        className="w-full min-w-0 flex-1 border-none bg-transparent outline-none"
+        className="w-0 flex-1 border-none bg-transparent outline-none"
         value={value === null ? "" : value}
         defaultValue={defaultValue}
         onChange={(e) => onChange?.(e.target.value)}

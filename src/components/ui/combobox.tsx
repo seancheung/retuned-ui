@@ -297,7 +297,7 @@ export default function Combobox<T = unknown>({
           aria-activedescendant={
             activeIndex !== null ? `${listId}-${activeIndex}` : undefined
           }
-          className="w-full min-w-0 flex-1 border-none bg-transparent outline-none placeholder:text-content-400"
+          className="w-0 flex-1 border-none bg-transparent outline-none placeholder:text-content-400"
           {...getReferenceProps({
             onChange(e) {
               const next = (e.target as HTMLInputElement).value;

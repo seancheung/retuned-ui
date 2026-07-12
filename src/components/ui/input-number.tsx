@@ -108,9 +108,7 @@ export default function InputNumber({
         type="text"
         inputMode={integer ? "numeric" : "decimal"}
         disabled={disabled}
-        className={cn(
-          "w-full min-w-0 flex-1 border-none bg-transparent outline-none",
-        )}
+        className={cn("w-0 flex-1 border-none bg-transparent outline-none")}
         {...props}
         value={text}
         onChange={(e) => setText(e.target.value)}
