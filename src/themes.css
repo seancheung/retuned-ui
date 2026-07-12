@@ -27,6 +27,8 @@
   --color-primary-500: #3b82f6;
   --color-primary-600: #2563eb;
   --color-primary-content: #eff6ff;
+
+  --spacing: 0.2rem;
 }
 
 :root[data-style="blue"][data-theme="light"] {
