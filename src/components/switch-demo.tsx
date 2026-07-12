@@ -10,9 +10,8 @@ export default function SwitchDemo() {
       <ComponentRow title="Checked">
         <Switch label="自动保存进度" defaultValue />
       </ComponentRow>
-      <ComponentRow title="Size" vertical>
+      <ComponentRow title="Small">
         <Switch size="sm" label="Small" defaultValue />
-        <Switch size="md" label="Medium" defaultValue />
       </ComponentRow>
       <ComponentRow title="Disabled">
         <Switch label="未选中 · 禁用" disabled />
