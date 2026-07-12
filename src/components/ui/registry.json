@@ -62,6 +62,21 @@
       ]
     },
     {
+      "name": "collapsible",
+      "type": "registry:item",
+      "title": "Collapsible",
+      "description": "A collapsible panel with an animated expand/collapse transition, optional leading icon, borderless mode and a disabled state.",
+      "dependencies": ["class-variance-authority", "lucide-react", "motion"],
+      "registryDependencies": ["seancheung/retuned-ui/setup"],
+      "files": [
+        {
+          "path": "collapsible.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/collapsible.tsx"
+        }
+      ]
+    },
+    {
       "name": "combobox",
       "type": "registry:item",
       "title": "Combobox",

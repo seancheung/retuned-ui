@@ -2,6 +2,7 @@ import AlertDemo from "@/components/alert-demo";
 import BadgeDemo from "@/components/badge-demo";
 import ButtonDemo from "@/components/button-demo";
 import CheckboxDemo from "@/components/checkbox-demo";
+import CollapsibleDemo from "@/components/collapsible-demo";
 import ComboboxDemo from "@/components/combobox-demo";
 import ContextMenuDemo from "@/components/context-menu-demo";
 import { SectionHeader } from "@/components/demo";
@@ -53,6 +54,7 @@ export default function ComponentsSection() {
         <SwitchDemo />
         <TabDemo />
         <SegmentedControlDemo />
+        <CollapsibleDemo />
         <InputNumberDemo />
         <InputPasswordDemo />
         <KnobDemo />
