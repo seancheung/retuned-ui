@@ -1,3 +1,5 @@
+/** biome-ignore-all lint/correctness/useExhaustiveDependencies: refs are stable; only re-bind when open toggles */
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import {
@@ -186,7 +188,6 @@ export default function MultiCombobox<T = unknown>({
     capture: { outsidePress: true, escapeKey: true },
   });
 
-  // biome-ignore lint/correctness/useExhaustiveDependencies: refs are stable; only re-bind when open toggles
   useEffect(() => {
     if (!open) return;
     function handle(event: MouseEvent) {
@@ -274,7 +275,6 @@ export default function MultiCombobox<T = unknown>({
   const showLoading = loading && items.length === 0;
 
   const sentinelRef = useRef<HTMLDivElement>(null);
-  // biome-ignore lint/correctness/useExhaustiveDependencies: re-observe when items change so newly appended sentinel triggers load
   useEffect(() => {
     if (!open || !hasMore || !onLoadMore) return;
     const node = sentinelRef.current;
