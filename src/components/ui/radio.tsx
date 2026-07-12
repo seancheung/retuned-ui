@@ -86,7 +86,7 @@ export default function Radio({
         className={cn(
           "inline-flex size-3.5 shrink-0 items-center justify-center rounded-full border border-base-400 bg-base-100 transition-colors",
           "peer-checked:border-primary-500",
-          "peer-focus-visible:ring-3 peer-focus-visible:ring-primary-500/20",
+          "peer-focus-visible:ring-3 peer-focus-visible:ring-ring/20",
           "[&>span]:size-1.5 [&>span]:scale-0 [&>span]:rounded-full [&>span]:bg-primary-500 [&>span]:transition-transform peer-checked:[&>span]:scale-100",
         )}
       >

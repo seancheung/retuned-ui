@@ -53,7 +53,7 @@ export default function Checkbox({
         className={cn(
           "inline-flex size-3.5 shrink-0 items-center justify-center rounded-sm border border-base-400 bg-base-100 transition-colors",
           "peer-checked:border-primary-500 peer-checked:bg-primary-500",
-          "peer-focus-visible:ring-3 peer-focus-visible:ring-primary-500/20",
+          "peer-focus-visible:ring-3 peer-focus-visible:ring-ring/20",
           "has-icon-3 icon:scale-0 icon:text-primary-content icon:transition-transform peer-checked:icon:scale-100",
         )}
       >

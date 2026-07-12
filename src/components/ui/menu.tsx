@@ -52,7 +52,7 @@ export function hasSubmenu(item: MenuItem): item is MenuItemSubmenu {
 }
 
 export const menuPanelClass = cn(
-  "flex min-w-40 flex-col rounded-md border border-base-200 bg-base-100 p-1 text-content-100 text-sm shadow-lg",
+  "flex min-w-40 flex-col rounded-md border border-base-200 bg-base-100 p-1 text-content-100 text-sm shadow-(--shadow-overlay)",
 );
 export const menuPanelCompactClass = cn("min-w-30 p-0.5 text-xs");
 

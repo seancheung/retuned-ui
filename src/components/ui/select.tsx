@@ -26,7 +26,7 @@ const triggerVariants = cva(
       error: {
         true: "border-error focus-visible:ring-3 focus-visible:ring-error/10 data-[open=true]:ring-3 data-[open=true]:ring-error/10",
         false:
-          "border-base-400 focus-visible:border-primary-500 focus-visible:ring-3 focus-visible:ring-primary-500/10 data-[open=true]:border-primary-500 data-[open=true]:ring-3 data-[open=true]:ring-primary-500/10",
+          "border-base-400 focus-visible:border-primary-500 focus-visible:ring-3 focus-visible:ring-ring/10 data-[open=true]:border-primary-500 data-[open=true]:ring-3 data-[open=true]:ring-ring/10",
       },
       disabled: {
         true: "opacity-40",
@@ -225,7 +225,7 @@ export default function Select<T = unknown>({
             >
               <div
                 style={{ ...transitionStyles, maxHeight: "inherit" }}
-                className="flex flex-col overflow-y-auto rounded-md border border-base-400 bg-base-100 p-1 text-content-100 text-sm shadow-lg"
+                className="flex flex-col overflow-y-auto rounded-md border border-base-400 bg-base-100 p-1 text-content-100 text-sm shadow-(--shadow-overlay)"
               >
                 {options.length === 0 && (
                   <div className="px-2 py-2 text-content-400 text-xs">

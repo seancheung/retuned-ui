@@ -120,7 +120,7 @@ export function Toaster({ position }: ToasterProps = {}) {
 }
 
 const itemVariants = cva(
-  "pointer-events-auto flex w-90 max-w-[calc(100vw-2rem)] items-start gap-3 rounded-md border px-4 py-3 text-sm shadow-lg backdrop-blur",
+  "pointer-events-auto flex w-90 max-w-[calc(100vw-2rem)] items-start gap-3 rounded-md border px-4 py-3 text-sm shadow-(--shadow-overlay) backdrop-blur",
   {
     variants: {
       variant: {

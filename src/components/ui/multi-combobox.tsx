@@ -29,7 +29,7 @@ const containerVariants = cva(
       error: {
         true: "border-error focus-within:ring-3 focus-within:ring-error/10",
         false:
-          "border-base-400 focus-within:border-primary-500 focus-within:ring-3 focus-within:ring-primary-500/10",
+          "border-base-400 focus-within:border-primary-500 focus-within:ring-3 focus-within:ring-ring/10",
       },
       disabled: {
         true: "opacity-40",
@@ -424,7 +424,7 @@ export default function MultiCombobox<T = unknown>({
             <div
               id={listId}
               style={{ ...transitionStyles, maxHeight: "inherit" }}
-              className="flex flex-col overflow-y-auto rounded-md border border-base-400 bg-base-100 p-1 text-content-100 text-sm shadow-lg"
+              className="flex flex-col overflow-y-auto rounded-md border border-base-400 bg-base-100 p-1 text-content-100 text-sm shadow-(--shadow-overlay)"
             >
               {showLoading && (
                 <div className="flex items-center justify-center gap-2 px-2 py-3 text-content-400 text-xs">

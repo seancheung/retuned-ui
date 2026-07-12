@@ -7,7 +7,7 @@ const variants = cva(
       error: {
         true: "border-error focus-within:ring-3 focus-within:ring-error/10",
         false:
-          "border-base-400 focus-within:border-primary-500 focus-within:ring-3 focus-within:ring-primary-500/10",
+          "border-base-400 focus-within:border-primary-500 focus-within:ring-3 focus-within:ring-ring/10",
       },
       disabled: {
         true: "opacity-40",
