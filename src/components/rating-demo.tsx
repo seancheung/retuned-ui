@@ -8,7 +8,7 @@ export default function RatingDemo() {
       <ComponentRow title="Default">
         <Rating defaultValue={3} />
       </ComponentRow>
-      <ComponentRow title="Sizes">
+      <ComponentRow title="Sizes" vertical>
         <Rating defaultValue={3} size="sm" />
         <Rating defaultValue={3} />
         <Rating defaultValue={3} size="lg" />

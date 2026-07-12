@@ -1,3 +1,5 @@
+import { cn } from "@/utils/cn";
+
 export const SAMPLE = "开始你的第一本有声书 · Start your first audiobook";
 
 export const voiceOptions = [
@@ -58,16 +60,25 @@ export function ComponentGroup({
 export function ComponentRow({
   title,
   children,
+  vertical,
 }: {
   title: React.ReactNode;
   children: React.ReactNode;
+  vertical?: boolean;
 }) {
   return (
-    <div className="flex flex-wrap items-center gap-3">
+    <div className={cn("flex flex-wrap gap-3", !vertical && "items-center")}>
       <div className="w-20 font-mono text-content-300 text-xs uppercase tracking-wider">
         {title}
       </div>
-      {children}
+      <div
+        className={cn(
+          "flex flex-1 flex-wrap gap-3",
+          vertical ? "flex-col items-start" : "items-center",
+        )}
+      >
+        {children}
+      </div>
     </div>
   );
 }

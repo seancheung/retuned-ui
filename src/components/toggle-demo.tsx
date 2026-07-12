@@ -36,8 +36,8 @@ export default function ToggleDemo() {
           Error
         </Toggle>
       </ComponentRow>
-      <ComponentRow title="Size">
-        <ToggleGroup defaultValue="md">
+      <ComponentRow title="Size" vertical>
+        <ToggleGroup defaultValue="md" className="flex-col items-start">
           <Toggle value="sm" size="sm">
             Small
           </Toggle>

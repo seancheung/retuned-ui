@@ -7,7 +7,7 @@ export default function SliderDemo() {
       <ComponentRow title="Default">
         <Slider className="flex-1" />
       </ComponentRow>
-      <ComponentRow title="Sizes">
+      <ComponentRow title="Sizes" vertical>
         <Slider className="flex-1" size="sm" />
         <Slider className="flex-1" />
         <Slider className="flex-1" size="lg" />

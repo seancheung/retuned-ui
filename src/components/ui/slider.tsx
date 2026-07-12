@@ -15,12 +15,12 @@ const variants = cva(
       },
     },
     compoundVariants: [
-      { direction: "horizontal", size: "sm", className: "h-0.5" },
-      { direction: "horizontal", size: "md", className: "h-1" },
-      { direction: "horizontal", size: "lg", className: "h-1.5" },
-      { direction: "vertical", size: "sm", className: "w-0.5" },
-      { direction: "vertical", size: "md", className: "w-1" },
-      { direction: "vertical", size: "lg", className: "w-1.5" },
+      { direction: "horizontal", size: "sm", className: "h-0.5 max-h-0.5" },
+      { direction: "horizontal", size: "md", className: "h-1 max-h-1" },
+      { direction: "horizontal", size: "lg", className: "h-1.5 max-h-1.5" },
+      { direction: "vertical", size: "sm", className: "w-0.5 max-w-0.5" },
+      { direction: "vertical", size: "md", className: "w-1 max-w-1" },
+      { direction: "vertical", size: "lg", className: "w-1.5 max-w-1.5" },
     ],
     defaultVariants: {
       direction: "horizontal",
