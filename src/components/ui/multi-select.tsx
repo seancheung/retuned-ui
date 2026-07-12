@@ -196,7 +196,7 @@ export default function MultiSelect<T = unknown>({
           {visibleTags.map((opt) => (
             <span
               key={String(opt.value)}
-              className="inline-flex max-w-full items-center gap-1 rounded bg-base-300 py-0.5 pr-1 pl-1.5 text-content-200 text-xs"
+              className="inline-flex max-w-full items-center gap-1 rounded-sm bg-base-300 py-0.5 pr-1 pl-1.5 text-content-200 text-xs"
             >
               <span className="truncate">{opt.label}</span>
               <span
@@ -215,7 +215,7 @@ export default function MultiSelect<T = unknown>({
             </span>
           ))}
           {hiddenCount > 0 && (
-            <span className="inline-flex items-center rounded bg-base-300 px-1.5 py-0.5 text-content-300 text-xs">
+            <span className="inline-flex items-center rounded-sm bg-base-300 px-1.5 py-0.5 text-content-300 text-xs">
               +{hiddenCount}
             </span>
           )}

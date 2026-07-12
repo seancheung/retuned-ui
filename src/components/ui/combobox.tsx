@@ -330,7 +330,7 @@ export default function Combobox<T = unknown>({
               setOpen((v) => !v);
             }}
             className={cn(
-              "has-icon-3.5 absolute inset-0 inline-flex cursor-pointer items-center justify-center rounded text-content-400 transition icon:transition-transform not-disabled:hover:text-content-300",
+              "has-icon-3.5 absolute inset-0 inline-flex cursor-pointer items-center justify-center rounded-sm text-content-400 transition icon:transition-transform not-disabled:hover:text-content-300",
               showClear && "group-focus-within:opacity-0 group-hover:opacity-0",
             )}
           >
@@ -343,7 +343,7 @@ export default function Combobox<T = unknown>({
               aria-label="Clear"
               onMouseDown={(e) => e.preventDefault()}
               onClick={handleClear}
-              className="has-icon-3.5 absolute inset-0 inline-flex cursor-pointer items-center justify-center rounded text-content-400 opacity-0 transition hover:text-content-200 group-focus-within:opacity-100 group-hover:opacity-100"
+              className="has-icon-3.5 absolute inset-0 inline-flex cursor-pointer items-center justify-center rounded-sm text-content-400 opacity-0 transition hover:text-content-200 group-focus-within:opacity-100 group-hover:opacity-100"
             >
               <XIcon />
             </button>

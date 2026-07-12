@@ -300,7 +300,7 @@ export default function MultiCombobox<T = unknown>({
         {visibleTags.map((tag) => (
           <span
             key={String(tag.value)}
-            className="inline-flex max-w-full items-center gap-1 rounded bg-base-300 py-0.5 pr-1 pl-1.5 text-content-200 text-xs"
+            className="inline-flex max-w-full items-center gap-1 rounded-sm bg-base-300 py-0.5 pr-1 pl-1.5 text-content-200 text-xs"
           >
             <span className="truncate">{tag.label}</span>
             <button
@@ -320,7 +320,7 @@ export default function MultiCombobox<T = unknown>({
           </span>
         ))}
         {hiddenCount > 0 && (
-          <span className="inline-flex items-center rounded bg-base-300 px-1.5 py-0.5 text-content-300 text-xs">
+          <span className="inline-flex items-center rounded-sm bg-base-300 px-1.5 py-0.5 text-content-300 text-xs">
             +{hiddenCount}
           </span>
         )}
@@ -387,7 +387,7 @@ export default function MultiCombobox<T = unknown>({
               setOpen((v) => !v);
             }}
             className={cn(
-              "has-icon-3.5 absolute inset-0 inline-flex cursor-pointer items-center justify-center rounded text-content-400 transition icon:transition-transform not-disabled:hover:text-content-300",
+              "has-icon-3.5 absolute inset-0 inline-flex cursor-pointer items-center justify-center rounded-sm text-content-400 transition icon:transition-transform not-disabled:hover:text-content-300",
               showClear && "group-focus-within:opacity-0 group-hover:opacity-0",
             )}
           >
@@ -403,7 +403,7 @@ export default function MultiCombobox<T = unknown>({
                 e.stopPropagation();
                 handleClear();
               }}
-              className="has-icon-3.5 absolute inset-0 inline-flex cursor-pointer items-center justify-center rounded text-content-400 opacity-0 transition hover:text-content-200 group-focus-within:opacity-100 group-hover:opacity-100"
+              className="has-icon-3.5 absolute inset-0 inline-flex cursor-pointer items-center justify-center rounded-sm text-content-400 opacity-0 transition hover:text-content-200 group-focus-within:opacity-100 group-hover:opacity-100"
             >
               <XIcon />
             </button>
