@@ -3,7 +3,7 @@ import { cn } from "@/utils/cn";
 
 const colorGroups = [
   {
-    title: "品牌主色 · 琥珀色系",
+    title: "品牌主色",
     colors: [
       {
         name: "primary-400",
@@ -83,7 +83,7 @@ const colorGroups = [
     ],
   },
   {
-    title: "语义色 · 为深色底调校",
+    title: "语义色",
     colors: [
       {
         name: "success",
