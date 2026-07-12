@@ -12,6 +12,8 @@ import InputDemo from "@/components/input-demo";
 import InputNumberDemo from "@/components/input-number-demo";
 import InputPasswordDemo from "@/components/input-password-demo";
 import KnobDemo from "@/components/knob-demo";
+import MultiComboboxDemo from "@/components/multi-combobox-demo";
+import MultiSelectDemo from "@/components/multi-select-demo";
 import ProgressDemo from "@/components/progress-demo";
 import RadioDemo from "@/components/radio-demo";
 import SegmentedControlDemo from "@/components/segmented-control-demo";
@@ -35,7 +37,9 @@ export default function ComponentsSection() {
         <SliderDemo />
         <InputDemo />
         <SelectDemo />
+        <MultiSelectDemo />
         <ComboboxDemo />
+        <MultiComboboxDemo />
         <DropdownDemo />
         <ContextMenuDemo />
         <TooltipDemo />

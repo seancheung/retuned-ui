@@ -236,6 +236,44 @@
       ]
     },
     {
+      "name": "multi-combobox",
+      "type": "registry:item",
+      "title": "Multi Combobox",
+      "description": "A searchable multiple-selection input that shows selected options as removable tags, with async loading, custom value entry, tag overflow collapsing, clearable selection and an optional leading icon.",
+      "dependencies": [
+        "@floating-ui/react",
+        "class-variance-authority",
+        "lucide-react"
+      ],
+      "registryDependencies": ["seancheung/retuned-ui/setup"],
+      "files": [
+        {
+          "path": "multi-combobox.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/multi-combobox.tsx"
+        }
+      ]
+    },
+    {
+      "name": "multi-select",
+      "type": "registry:item",
+      "title": "Multi Select",
+      "description": "A multiple-selection select that shows selected options as removable tags, with tag overflow collapsing, clearable selection, optional leading icon, and error and disabled states.",
+      "dependencies": [
+        "@floating-ui/react",
+        "class-variance-authority",
+        "lucide-react"
+      ],
+      "registryDependencies": ["seancheung/retuned-ui/setup"],
+      "files": [
+        {
+          "path": "multi-select.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/multi-select.tsx"
+        }
+      ]
+    },
+    {
       "name": "progress",
       "type": "registry:item",
       "title": "Progress",
