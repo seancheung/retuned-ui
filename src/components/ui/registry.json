@@ -304,6 +304,21 @@
       ]
     },
     {
+      "name": "popover",
+      "type": "registry:item",
+      "title": "Popover",
+      "description": "A click-triggered floating panel for arbitrary content, positionable on any side of its trigger, with an optional title and a pointing arrow.",
+      "dependencies": ["@floating-ui/react", "@radix-ui/react-slot"],
+      "registryDependencies": ["seancheung/retuned-ui/setup"],
+      "files": [
+        {
+          "path": "popover.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/popover.tsx"
+        }
+      ]
+    },
+    {
       "name": "progress",
       "type": "registry:item",
       "title": "Progress",

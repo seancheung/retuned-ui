@@ -16,6 +16,7 @@ import InputPasswordDemo from "@/components/input-password-demo";
 import KnobDemo from "@/components/knob-demo";
 import MultiComboboxDemo from "@/components/multi-combobox-demo";
 import MultiSelectDemo from "@/components/multi-select-demo";
+import PopoverDemo from "@/components/popover-demo";
 import ProgressDemo from "@/components/progress-demo";
 import RadioDemo from "@/components/radio-demo";
 import RatingDemo from "@/components/rating-demo";
@@ -59,6 +60,7 @@ export default function ComponentsSection() {
         <DropdownDemo />
         <ContextMenuDemo />
         <TooltipDemo />
+        <PopoverDemo />
         <DialogDemo />
         <DrawerDemo />
         <ToastDemo />
