@@ -1,10 +1,15 @@
 import { cn } from "@/utils/cn";
 
-export function Table({ className, ...props }: React.ComponentProps<"table">) {
+export function Table({
+  className,
+  compact,
+  ...props
+}: React.ComponentProps<"table"> & { compact?: boolean }) {
   return (
     <div className="overflow-x-auto rounded-lg border border-base-400 bg-base-100">
       <table
-        className={cn("w-full caption-bottom text-sm", className)}
+        data-compact={compact || undefined}
+        className={cn("group/table w-full caption-bottom text-sm", className)}
         {...props}
       />
     </div>
@@ -73,6 +78,7 @@ export function TableHead({ className, ...props }: React.ComponentProps<"th">) {
     <th
       className={cn(
         "h-10 px-4 text-left align-middle font-medium text-content-300 text-xs",
+        "group-data-[compact]/table:h-8 group-data-[compact]/table:px-3",
         className,
       )}
       {...props}
@@ -83,7 +89,11 @@ export function TableHead({ className, ...props }: React.ComponentProps<"th">) {
 export function TableCell({ className, ...props }: React.ComponentProps<"td">) {
   return (
     <td
-      className={cn("px-4 py-3 align-middle text-content-100", className)}
+      className={cn(
+        "px-4 py-3 align-middle text-content-100",
+        "group-data-[compact]/table:px-3 group-data-[compact]/table:py-1.5",
+        className,
+      )}
       {...props}
     />
   );

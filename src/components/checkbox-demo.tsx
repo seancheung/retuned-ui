@@ -10,6 +10,11 @@ export default function CheckboxDemo() {
       <ComponentRow title="Checked">
         <Checkbox label="自动跳过已忽略的句子" defaultValue />
       </ComponentRow>
+      <ComponentRow title="Sizes">
+        <Checkbox label="小尺寸" size="sm" defaultValue />
+        <Checkbox label="默认尺寸" defaultValue />
+        <Checkbox label="大尺寸" size="lg" defaultValue />
+      </ComponentRow>
       <ComponentRow title="Disabled">
         <Checkbox label="未选中 · 禁用" disabled />
         <Checkbox label="选中 · 禁用" disabled defaultValue />

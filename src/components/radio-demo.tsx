@@ -11,6 +11,13 @@ export default function RadioDemo() {
           <Radio value="wav" label="WAV（无损）" />
         </RadioGroup>
       </ComponentRow>
+      <ComponentRow title="Sizes">
+        <RadioGroup defaultValue="md" className="flex-row gap-4">
+          <Radio value="sm" label="小尺寸" size="sm" />
+          <Radio value="md" label="默认尺寸" />
+          <Radio value="lg" label="大尺寸" size="lg" />
+        </RadioGroup>
+      </ComponentRow>
       <ComponentRow title="Disabled">
         <RadioGroup defaultValue="high" disabled className="flex-row gap-4">
           <Radio value="standard" label="标准品质" />

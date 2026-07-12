@@ -42,45 +42,58 @@ const statusBadge = {
 export default function TableDemo() {
   return (
     <ComponentGroup title="Table">
-      <Table>
-        <TableCaption>最近一次导出任务的章节明细</TableCaption>
-        <TableHeader>
-          <TableRow>
-            <TableHead>章节</TableHead>
-            <TableHead className="text-right">句子数</TableHead>
-            <TableHead className="text-right">时长</TableHead>
-            <TableHead className="text-right">状态</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {chapters.map((chapter) => (
-            <TableRow key={chapter.name}>
-              <TableCell className="font-medium text-content-100">
-                {chapter.name}
-              </TableCell>
-              <TableCell className="text-right font-mono">
-                {chapter.sentences}
-              </TableCell>
-              <TableCell className="text-right font-mono">
-                {chapter.duration}
-              </TableCell>
-              <TableCell className="text-right">
-                <Badge variant={statusBadge[chapter.status].variant} size="sm">
-                  {statusBadge[chapter.status].label}
-                </Badge>
-              </TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-        <TableFooter>
-          <TableRow>
-            <TableCell>共 4 章</TableCell>
-            <TableCell className="text-right font-mono">1,247</TableCell>
-            <TableCell className="text-right font-mono">77:24</TableCell>
-            <TableCell />
-          </TableRow>
-        </TableFooter>
-      </Table>
+      <ChapterTable caption="最近一次导出任务的章节明细" />
+      <ChapterTable caption="紧凑模式" compact />
     </ComponentGroup>
+  );
+}
+
+function ChapterTable({
+  caption,
+  compact,
+}: {
+  caption: string;
+  compact?: boolean;
+}) {
+  return (
+    <Table compact={compact}>
+      <TableCaption>{caption}</TableCaption>
+      <TableHeader>
+        <TableRow>
+          <TableHead>章节</TableHead>
+          <TableHead className="text-right">句子数</TableHead>
+          <TableHead className="text-right">时长</TableHead>
+          <TableHead className="text-right">状态</TableHead>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        {chapters.map((chapter) => (
+          <TableRow key={chapter.name}>
+            <TableCell className="font-medium text-content-100">
+              {chapter.name}
+            </TableCell>
+            <TableCell className="text-right font-mono">
+              {chapter.sentences}
+            </TableCell>
+            <TableCell className="text-right font-mono">
+              {chapter.duration}
+            </TableCell>
+            <TableCell className="text-right">
+              <Badge variant={statusBadge[chapter.status].variant} size="sm">
+                {statusBadge[chapter.status].label}
+              </Badge>
+            </TableCell>
+          </TableRow>
+        ))}
+      </TableBody>
+      <TableFooter>
+        <TableRow>
+          <TableCell>共 4 章</TableCell>
+          <TableCell className="text-right font-mono">1,247</TableCell>
+          <TableCell className="text-right font-mono">77:24</TableCell>
+          <TableCell />
+        </TableRow>
+      </TableFooter>
+    </Table>
   );
 }

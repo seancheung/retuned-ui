@@ -23,9 +23,14 @@ import { useEffect, useId, useRef, useState } from "react";
 import { cn } from "@/utils/cn";
 
 const containerVariants = cva(
-  "flex h-8 min-w-50 items-center gap-1.5 rounded-md border bg-base-100 pr-1.5 pl-3 text-content-100 text-sm transition-all",
+  "flex min-w-50 items-center gap-1.5 rounded-md border bg-base-100 text-content-100 transition-all",
   {
     variants: {
+      size: {
+        sm: "h-6 pr-1 pl-2 text-xs",
+        md: "h-8 pr-1.5 pl-3 text-sm",
+        lg: "h-9 pr-2 pl-3.5 text-base",
+      },
       error: {
         true: "border-error focus-within:ring-3 focus-within:ring-error/10",
         false:
@@ -37,6 +42,7 @@ const containerVariants = cva(
       },
     },
     defaultVariants: {
+      size: "md",
       error: false,
       disabled: false,
     },
@@ -51,7 +57,7 @@ export type ComboboxOption<T> = {
 
 export type ComboboxProps<T = unknown> = Omit<
   React.ComponentProps<"input">,
-  "value" | "onChange" | "defaultValue" | "type"
+  "value" | "onChange" | "defaultValue" | "type" | "size"
 > &
   VariantProps<typeof containerVariants> & {
     value?: T | null;
@@ -99,6 +105,7 @@ export default function Combobox<T = unknown>({
   renderOption,
   error,
   disabled,
+  size,
   className,
   ...props
 }: ComboboxProps<T>) {
@@ -269,7 +276,7 @@ export default function Combobox<T = unknown>({
         ref={refs.setReference}
         className={cn(
           "group relative",
-          containerVariants({ className, error, disabled }),
+          containerVariants({ className, size, error, disabled }),
         )}
         data-open={open || undefined}
       >

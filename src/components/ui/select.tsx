@@ -20,9 +20,14 @@ import { useRef, useState } from "react";
 import { cn } from "@/utils/cn";
 
 const triggerVariants = cva(
-  "has-icon inline-flex h-8 min-w-50 not-disabled:cursor-pointer items-center gap-1.5 rounded-md border bg-base-100 px-3 icon:text-content-400 text-content-100 text-sm outline-none transition-all",
+  "has-icon inline-flex min-w-50 not-disabled:cursor-pointer items-center gap-1.5 rounded-md border bg-base-100 icon:text-content-400 text-content-100 outline-none transition-all",
   {
     variants: {
+      size: {
+        sm: "h-6 px-2 text-xs",
+        md: "h-8 px-3 text-sm",
+        lg: "h-9 px-3.5 text-base",
+      },
       error: {
         true: "border-error focus-visible:ring-3 focus-visible:ring-error/10 data-[open=true]:ring-3 data-[open=true]:ring-error/10",
         false:
@@ -34,6 +39,7 @@ const triggerVariants = cva(
       },
     },
     defaultVariants: {
+      size: "md",
       error: false,
       disabled: false,
     },
@@ -73,6 +79,7 @@ export default function Select<T = unknown>({
   icon,
   error,
   disabled,
+  size,
   className,
   clearable,
   onClear,
@@ -173,7 +180,10 @@ export default function Select<T = unknown>({
         ref={refs.setReference}
         disabled={disabled ?? false}
         data-open={open}
-        className={cn("group", triggerVariants({ className, error, disabled }))}
+        className={cn(
+          "group",
+          triggerVariants({ className, size, error, disabled }),
+        )}
         {...getReferenceProps(props)}
       >
         {icon}

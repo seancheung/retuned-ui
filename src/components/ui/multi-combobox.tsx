@@ -23,9 +23,14 @@ import { useEffect, useId, useRef, useState } from "react";
 import { cn } from "@/utils/cn";
 
 const containerVariants = cva(
-  "flex min-h-8 min-w-50 flex-wrap items-center gap-1 rounded-md border bg-base-100 py-1 pr-1.5 text-content-100 text-sm transition-all",
+  "flex min-w-50 flex-wrap items-center gap-1 rounded-md border bg-base-100 text-content-100 transition-all",
   {
     variants: {
+      size: {
+        sm: "min-h-6 py-0.5 pr-1 text-xs",
+        md: "min-h-8 py-1 pr-1.5 text-sm",
+        lg: "min-h-9 py-1 pr-2 text-base",
+      },
       error: {
         true: "border-error focus-within:ring-3 focus-within:ring-error/10",
         false:
@@ -37,6 +42,7 @@ const containerVariants = cva(
       },
     },
     defaultVariants: {
+      size: "md",
       error: false,
       disabled: false,
     },
@@ -51,7 +57,7 @@ export type MultiComboboxOption<T> = {
 
 export type MultiComboboxProps<T = unknown> = Omit<
   React.ComponentProps<"input">,
-  "value" | "onChange" | "defaultValue" | "type"
+  "value" | "onChange" | "defaultValue" | "type" | "size"
 > &
   VariantProps<typeof containerVariants> & {
     value?: T[];
@@ -101,6 +107,7 @@ export default function MultiCombobox<T = unknown>({
   renderOption,
   error,
   disabled,
+  size,
   className,
   ...props
 }: MultiComboboxProps<T>) {
@@ -289,8 +296,10 @@ export default function MultiCombobox<T = unknown>({
         }}
         className={cn(
           "group relative",
-          containerVariants({ className, error, disabled }),
-          tags.length > 0 ? "pl-1" : "pl-3",
+          containerVariants({ className, size, error, disabled }),
+          tags.length > 0
+            ? "pl-1"
+            : { sm: "pl-2", md: "pl-3", lg: "pl-3.5" }[size ?? "md"],
         )}
         data-open={open || undefined}
       >

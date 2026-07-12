@@ -1,9 +1,14 @@
 import { cva, type VariantProps } from "class-variance-authority";
 
 const variants = cva(
-  "has-icon inline-flex h-8 min-w-50 items-center justify-center gap-1.5 rounded-md border bg-base-100 px-3 icon:text-content-400 text-content-100 text-sm transition-all",
+  "has-icon inline-flex min-w-50 items-center justify-center gap-1.5 rounded-md border bg-base-100 icon:text-content-400 text-content-100 transition-all",
   {
     variants: {
+      size: {
+        sm: "h-6 px-2 text-xs",
+        md: "h-8 px-3 text-sm",
+        lg: "h-9 px-3.5 text-base",
+      },
       error: {
         true: "border-error focus-within:ring-3 focus-within:ring-error/10",
         false:
@@ -15,6 +20,7 @@ const variants = cva(
       },
     },
     defaultVariants: {
+      size: "md",
       error: false,
       disabled: false,
     },
@@ -23,7 +29,7 @@ const variants = cva(
 
 export type InputProps = Omit<
   React.ComponentProps<"input">,
-  "value" | "defaultValue" | "onChange"
+  "value" | "defaultValue" | "onChange" | "size"
 > &
   VariantProps<typeof variants> & {
     value?: string | null;
@@ -36,6 +42,7 @@ export default function Input({
   error,
   icon,
   className,
+  size,
   disabled,
   value,
   defaultValue,
@@ -43,7 +50,7 @@ export default function Input({
   ...props
 }: InputProps) {
   return (
-    <div className={variants({ className, error, disabled })}>
+    <div className={variants({ className, size, error, disabled })}>
       {icon}
       <input
         {...props}

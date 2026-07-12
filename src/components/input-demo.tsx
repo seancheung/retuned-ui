@@ -14,6 +14,11 @@ export default function InputDemo() {
       <ComponentRow title="Icon">
         <Input defaultValue="这是示例文本" icon={<SearchIcon />} />
       </ComponentRow>
+      <ComponentRow title="Sizes">
+        <Input defaultValue="小尺寸" size="sm" />
+        <Input defaultValue="默认尺寸" />
+        <Input defaultValue="大尺寸" size="lg" />
+      </ComponentRow>
       <ComponentRow title="Disabled">
         <Input defaultValue="这是示例文本" disabled />
       </ComponentRow>

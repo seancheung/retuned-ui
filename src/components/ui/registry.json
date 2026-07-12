@@ -65,7 +65,7 @@
       "name": "checkbox",
       "type": "registry:item",
       "title": "Checkbox",
-      "description": "A checkbox with a built-in label, supporting controlled and uncontrolled usage and a disabled state.",
+      "description": "A checkbox with a built-in label, three sizes, controlled and uncontrolled usage and a disabled state.",
       "dependencies": ["class-variance-authority", "lucide-react"],
       "registryDependencies": ["seancheung/retuned-ui/setup"],
       "files": [
@@ -95,7 +95,7 @@
       "name": "combobox",
       "type": "registry:item",
       "title": "Combobox",
-      "description": "A searchable select input with async loading, custom value entry, clearable selection and an optional leading icon.",
+      "description": "A searchable select input with async loading, custom value entry, clearable selection, three sizes and an optional leading icon.",
       "dependencies": [
         "@floating-ui/react",
         "class-variance-authority",
@@ -132,7 +132,7 @@
       "name": "date-picker",
       "type": "registry:item",
       "title": "Date Picker",
-      "description": "A date picker with a floating calendar, month and year navigation, locale-aware labels, min/max range limits, clearable selection, and error and disabled states.",
+      "description": "A date picker with a floating calendar, month and year navigation, locale-aware labels, min/max range limits, clearable selection, three sizes, and error and disabled states.",
       "dependencies": [
         "@floating-ui/react",
         "class-variance-authority",
@@ -213,7 +213,7 @@
       "name": "input",
       "type": "registry:item",
       "title": "Input",
-      "description": "A single-line text input with error state, optional leading icon and disabled state.",
+      "description": "A single-line text input with three sizes, error state, optional leading icon and disabled state.",
       "dependencies": ["class-variance-authority"],
       "registryDependencies": ["seancheung/retuned-ui/setup"],
       "files": [
@@ -228,7 +228,7 @@
       "name": "input-number",
       "type": "registry:item",
       "title": "Input Number",
-      "description": "A numeric input with stepper buttons, min/max/step constraints, integer-only and clearable modes.",
+      "description": "A numeric input with stepper buttons, min/max/step constraints, three sizes, integer-only and clearable modes.",
       "dependencies": ["class-variance-authority"],
       "registryDependencies": ["seancheung/retuned-ui/setup"],
       "files": [
@@ -243,7 +243,7 @@
       "name": "input-password",
       "type": "registry:item",
       "title": "Input Password",
-      "description": "A password input with a visibility toggle, error state and optional leading icon.",
+      "description": "A password input with a visibility toggle, three sizes, error state and optional leading icon.",
       "dependencies": ["class-variance-authority", "lucide-react"],
       "registryDependencies": ["seancheung/retuned-ui/setup"],
       "files": [
@@ -288,7 +288,7 @@
       "name": "multi-combobox",
       "type": "registry:item",
       "title": "Multi Combobox",
-      "description": "A searchable multiple-selection input that shows selected options as removable tags, with async loading, custom value entry, tag overflow collapsing, clearable selection and an optional leading icon.",
+      "description": "A searchable multiple-selection input that shows selected options as removable tags, with async loading, custom value entry, tag overflow collapsing, clearable selection, three sizes and an optional leading icon.",
       "dependencies": [
         "@floating-ui/react",
         "class-variance-authority",
@@ -307,7 +307,7 @@
       "name": "multi-select",
       "type": "registry:item",
       "title": "Multi Select",
-      "description": "A multiple-selection select that shows selected options as removable tags, with tag overflow collapsing, clearable selection, optional leading icon, and error and disabled states.",
+      "description": "A multiple-selection select that shows selected options as removable tags, with tag overflow collapsing, clearable selection, optional leading icon, three sizes, and error and disabled states.",
       "dependencies": [
         "@floating-ui/react",
         "class-variance-authority",
@@ -356,7 +356,7 @@
       "name": "radio",
       "type": "registry:item",
       "title": "Radio",
-      "description": "A radio button with a built-in label, plus a RadioGroup for managing a single selection.",
+      "description": "A radio button with a built-in label and three sizes, plus a RadioGroup for managing a single selection.",
       "dependencies": ["class-variance-authority"],
       "registryDependencies": ["seancheung/retuned-ui/setup"],
       "files": [
@@ -401,7 +401,7 @@
       "name": "select",
       "type": "registry:item",
       "title": "Select",
-      "description": "A select input with placeholder, clearable selection, optional leading icon, and error and disabled states.",
+      "description": "A select input with placeholder, clearable selection, optional leading icon, three sizes, and error and disabled states.",
       "dependencies": [
         "@floating-ui/react",
         "class-variance-authority",
@@ -434,7 +434,7 @@
       "name": "slider",
       "type": "registry:item",
       "title": "Slider",
-      "description": "A horizontal slider for selecting a value from a range, with a disabled state.",
+      "description": "A horizontal slider for selecting a value from a range, with three sizes and a disabled state.",
       "dependencies": ["class-variance-authority"],
       "registryDependencies": ["seancheung/retuned-ui/setup"],
       "files": [
@@ -479,7 +479,7 @@
       "name": "table",
       "type": "registry:item",
       "title": "Table",
-      "description": "Styled table primitives (header, body, rows, cells and caption) for tabular data.",
+      "description": "Styled table primitives (header, body, rows, cells and caption) for tabular data, with a compact density mode.",
       "registryDependencies": ["seancheung/retuned-ui/setup"],
       "files": [
         {
@@ -493,7 +493,7 @@
       "name": "textarea",
       "type": "registry:item",
       "title": "Textarea",
-      "description": "A multi-line text input with error and disabled states.",
+      "description": "A multi-line text input with three sizes, and error and disabled states.",
       "dependencies": ["class-variance-authority"],
       "registryDependencies": ["seancheung/retuned-ui/setup"],
       "files": [
@@ -508,7 +508,7 @@
       "name": "time-picker",
       "type": "registry:item",
       "title": "Time Picker",
-      "description": "A time picker with scrollable hour, minute and optional second columns, a 12-hour mode, min/max limits, configurable steps, a Now shortcut, clearable selection, and error and disabled states.",
+      "description": "A time picker with scrollable hour, minute and optional second columns, a 12-hour mode, min/max limits, configurable steps, a Now shortcut, clearable selection, three sizes, and error and disabled states.",
       "dependencies": [
         "@floating-ui/react",
         "class-variance-authority",

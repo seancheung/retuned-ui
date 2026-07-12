@@ -7,6 +7,11 @@ export default function SliderDemo() {
       <ComponentRow title="Default">
         <Slider className="flex-1" />
       </ComponentRow>
+      <ComponentRow title="Sizes">
+        <Slider className="flex-1" size="sm" />
+        <Slider className="flex-1" />
+        <Slider className="flex-1" size="lg" />
+      </ComponentRow>
       <ComponentRow title="Disabled">
         <Slider className="flex-1" disabled />
       </ComponentRow>

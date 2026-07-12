@@ -32,6 +32,11 @@ export default function SelectDemo() {
           )}
         />
       </ComponentRow>
+      <ComponentRow title="Sizes">
+        <Select options={voiceOptions} defaultValue="alloy" size="sm" />
+        <Select options={voiceOptions} defaultValue="alloy" />
+        <Select options={voiceOptions} defaultValue="alloy" size="lg" />
+      </ComponentRow>
       <ComponentRow title="Error">
         <Select options={voiceOptions} defaultValue="onyx" error />
       </ComponentRow>

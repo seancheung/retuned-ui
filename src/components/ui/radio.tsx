@@ -12,23 +12,41 @@ type RadioGroupContextValue = {
 const RadioGroupContext = createContext<RadioGroupContextValue | null>(null);
 
 const variants = cva(
-  "inline-flex select-none items-center gap-2 text-content-100 text-sm",
+  "inline-flex select-none items-center gap-2 text-content-100",
   {
     variants: {
+      size: {
+        sm: "text-xs",
+        md: "text-sm",
+        lg: "text-base",
+      },
       disabled: {
         true: "cursor-not-allowed opacity-40",
         false: "cursor-pointer",
       },
     },
     defaultVariants: {
+      size: "md",
       disabled: false,
     },
   },
 );
 
+const boxSizes = {
+  sm: "size-3 [&>span]:size-1",
+  md: "size-3.5 [&>span]:size-1.5",
+  lg: "size-4 [&>span]:size-2",
+} as const;
+
 export type RadioProps = Omit<
   React.ComponentProps<"input">,
-  "type" | "value" | "defaultValue" | "checked" | "defaultChecked" | "onChange"
+  | "type"
+  | "value"
+  | "defaultValue"
+  | "checked"
+  | "defaultChecked"
+  | "onChange"
+  | "size"
 > &
   VariantProps<typeof variants> & {
     value?: unknown;
@@ -39,6 +57,7 @@ export type RadioProps = Omit<
 
 export default function Radio({
   className,
+  size,
   disabled,
   label,
   value,
@@ -72,7 +91,7 @@ export default function Radio({
   }
 
   return (
-    <label className={cn(variants({ className, disabled: isDisabled }))}>
+    <label className={cn(variants({ className, size, disabled: isDisabled }))}>
       <input
         type="radio"
         disabled={isDisabled}
@@ -84,10 +103,11 @@ export default function Radio({
       />
       <span
         className={cn(
-          "inline-flex size-3.5 shrink-0 items-center justify-center rounded-full border border-base-400 bg-base-100 transition-colors",
+          "inline-flex shrink-0 items-center justify-center rounded-full border border-base-400 bg-base-100 transition-colors",
           "peer-checked:border-primary-500",
           "peer-focus-visible:ring-3 peer-focus-visible:ring-ring/20",
-          "[&>span]:size-1.5 [&>span]:scale-0 [&>span]:rounded-full [&>span]:bg-primary-500 [&>span]:transition-transform peer-checked:[&>span]:scale-100",
+          "[&>span]:scale-0 [&>span]:rounded-full [&>span]:bg-primary-500 [&>span]:transition-transform peer-checked:[&>span]:scale-100",
+          boxSizes[size ?? "md"],
         )}
       >
         <span />
