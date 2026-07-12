@@ -35,30 +35,30 @@ export default function ComponentsSection() {
       <SectionHeader number="03" title="组件" />
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         <ButtonDemo />
-        <SliderDemo />
+        <ToggleDemo />
         <InputDemo />
+        <InputNumberDemo />
+        <InputPasswordDemo />
+        <TextareaDemo />
         <SelectDemo />
         <MultiSelectDemo />
         <ComboboxDemo />
         <MultiComboboxDemo />
-        <DropdownDemo />
-        <ContextMenuDemo />
-        <TooltipDemo />
-        <TextareaDemo />
-        <DrawerDemo />
-        <DialogDemo />
-        <AlertDemo />
-        <ToggleDemo />
         <CheckboxDemo />
         <RadioDemo />
         <SwitchDemo />
-        <TabDemo />
-        <SegmentedControlDemo />
-        <CollapsibleDemo />
-        <InputNumberDemo />
-        <InputPasswordDemo />
+        <SliderDemo />
         <KnobDemo />
+        <SegmentedControlDemo />
+        <TabDemo />
+        <CollapsibleDemo />
+        <DropdownDemo />
+        <ContextMenuDemo />
+        <TooltipDemo />
+        <DialogDemo />
+        <DrawerDemo />
         <ToastDemo />
+        <AlertDemo />
         <ProgressDemo />
         <BadgeDemo />
         <SkeletonDemo />
