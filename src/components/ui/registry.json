@@ -2,6 +2,21 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "items": [
     {
+      "name": "accordion",
+      "type": "registry:item",
+      "title": "Accordion",
+      "description": "A single-expand accordion with animated transitions, optional per-item icons, borderless mode and disabled items.",
+      "dependencies": ["class-variance-authority", "lucide-react", "motion"],
+      "registryDependencies": ["seancheung/retuned-ui/setup"],
+      "files": [
+        {
+          "path": "accordion.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/accordion.tsx"
+        }
+      ]
+    },
+    {
       "name": "alert",
       "type": "registry:item",
       "title": "Alert",

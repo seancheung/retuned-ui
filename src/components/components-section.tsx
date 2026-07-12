@@ -1,3 +1,4 @@
+import AccordionDemo from "@/components/accordion-demo";
 import AlertDemo from "@/components/alert-demo";
 import BadgeDemo from "@/components/badge-demo";
 import ButtonDemo from "@/components/button-demo";
@@ -52,6 +53,7 @@ export default function ComponentsSection() {
         <SegmentedControlDemo />
         <TabDemo />
         <CollapsibleDemo />
+        <AccordionDemo />
         <DropdownDemo />
         <ContextMenuDemo />
         <TooltipDemo />
