@@ -29,6 +29,7 @@ import SwitchDemo from "@/components/switch-demo";
 import TabDemo from "@/components/tab-demo";
 import TableDemo from "@/components/table-demo";
 import TextareaDemo from "@/components/textarea-demo";
+import TimePickerDemo from "@/components/time-picker-demo";
 import ToastDemo from "@/components/toast-demo";
 import ToggleDemo from "@/components/toggle-demo";
 import TooltipDemo from "@/components/tooltip-demo";
@@ -49,6 +50,7 @@ export default function ComponentsSection() {
         <ComboboxDemo />
         <MultiComboboxDemo />
         <DatePickerDemo />
+        <TimePickerDemo />
         <CheckboxDemo />
         <RadioDemo />
         <SwitchDemo />

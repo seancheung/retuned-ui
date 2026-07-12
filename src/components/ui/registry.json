@@ -505,6 +505,25 @@
       ]
     },
     {
+      "name": "time-picker",
+      "type": "registry:item",
+      "title": "Time Picker",
+      "description": "A time picker with scrollable hour, minute and optional second columns, a 12-hour mode, min/max limits, configurable steps, a Now shortcut, clearable selection, and error and disabled states.",
+      "dependencies": [
+        "@floating-ui/react",
+        "class-variance-authority",
+        "lucide-react"
+      ],
+      "registryDependencies": ["seancheung/retuned-ui/setup"],
+      "files": [
+        {
+          "path": "time-picker.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/time-picker.tsx"
+        }
+      ]
+    },
+    {
       "name": "toast",
       "type": "registry:item",
       "title": "Toast",
