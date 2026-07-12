@@ -68,8 +68,8 @@ export default function Select<T = unknown>({
   defaultValue,
   onChange,
   options,
-  placeholder = "请选择…",
-  emptyMessage = "暂无选项",
+  placeholder = "Select…",
+  emptyMessage = "No options",
   icon,
   error,
   disabled,
@@ -196,7 +196,7 @@ export default function Select<T = unknown>({
             <span
               role="button"
               tabIndex={-1}
-              aria-label="清除"
+              aria-label="Clear"
               onMouseDown={(e) => e.stopPropagation()}
               onClick={(e) => {
                 e.stopPropagation();

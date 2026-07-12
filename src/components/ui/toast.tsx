@@ -13,6 +13,7 @@ export type ToastData = {
   description?: React.ReactNode;
   variant: ToastVariant;
   duration: number;
+  icon?: React.ReactNode;
   action?: { label: React.ReactNode; onClick: () => void };
 };
 
@@ -105,7 +106,10 @@ export function Toaster({ position }: ToasterProps = {}) {
   const ordered = isTop ? items : [...items].reverse();
 
   return (
-    <section className={cn(containerVariants({ position }))} aria-label="通知">
+    <section
+      className={cn(containerVariants({ position }))}
+      aria-label="Notifications"
+    >
       <AnimatePresence initial={false}>
         {ordered.map((t) => (
           <ToastItem key={t.id} toast={t} fromTop={isTop} />
@@ -181,9 +185,15 @@ function ToastItem({
       className={cn(itemVariants({ variant: t.variant }))}
       role="status"
     >
-      {Icon && semantic && (
-        <span className={cn(badgeVariants({ variant: semantic }))}>
-          <Icon />
+      {(t.icon != null || semantic) && (
+        <span
+          className={cn(
+            semantic
+              ? badgeVariants({ variant: semantic })
+              : "has-icon-3 mt-px inline-flex size-4 shrink-0 items-center justify-center",
+          )}
+        >
+          {t.icon ?? (Icon && <Icon />)}
         </span>
       )}
       <div className="min-w-0 flex-1">

@@ -62,7 +62,7 @@ export default function InputPassword({
         tabIndex={-1}
         disabled={disabled ?? false}
         onClick={() => setVisible((v) => !v)}
-        aria-label={visible ? "隐藏密码" : "显示密码"}
+        aria-label={visible ? "Hide password" : "Show password"}
         className="has-icon -mr-1 inline-flex size-6 shrink-0 cursor-pointer items-center justify-center rounded-sm text-content-400 transition-colors not-disabled:hover:text-content-200"
       >
         {visible ? <EyeOffIcon /> : <EyeIcon />}
