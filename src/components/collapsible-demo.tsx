@@ -24,8 +24,8 @@ export default function CollapsibleDemo() {
           {SAMPLE}
         </Collapsible>
       </ComponentRow>
-      <ComponentRow title="Borderless">
-        <Collapsible title="章节简介" bordered={false} className="flex-1">
+      <ComponentRow title="Bordered">
+        <Collapsible title="章节简介" bordered className="flex-1">
           {SAMPLE}
         </Collapsible>
       </ComponentRow>

@@ -42,8 +42,8 @@ export default function AccordionDemo() {
           className="flex-1"
         />
       </ComponentRow>
-      <ComponentRow title="Borderless">
-        <Accordion items={chapters} bordered={false} className="flex-1" />
+      <ComponentRow title="Bordered">
+        <Accordion items={chapters} bordered className="flex-1" />
       </ComponentRow>
       <ComponentRow title="Disabled">
         <Accordion

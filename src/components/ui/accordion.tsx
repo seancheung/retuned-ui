@@ -14,7 +14,7 @@ const variants = cva(
       },
     },
     defaultVariants: {
-      bordered: true,
+      bordered: false,
     },
   },
 );

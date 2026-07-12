@@ -16,7 +16,7 @@ const variants = cva("rounded-md text-content-100 text-sm", {
     },
   },
   defaultVariants: {
-    bordered: true,
+    bordered: false,
     disabled: false,
   },
 });
