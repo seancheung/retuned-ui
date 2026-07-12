@@ -9,6 +9,7 @@ const styleOptions = [
   { value: "violet", label: "Violet · 紫罗兰" },
   { value: "blue", label: "Blue · 蔚蓝" },
   { value: "emerald", label: "Emerald · 翡翠" },
+  { value: "rose", label: "Rose · 玫瑰" },
 ];
 
 export default function ThemeSelector() {

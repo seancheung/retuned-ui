@@ -38,6 +38,27 @@
   --color-primary-content: #eff6ff;
 }
 
+:root[data-style="rose"] {
+  --color-primary-400: #fb7185;
+  --color-primary-500: #f43f5e;
+  --color-primary-600: #e11d48;
+  --color-primary-content: #fff1f2;
+
+  --spacing: 0.3rem;
+
+  --radius-xs: 0.375rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.25rem;
+}
+
+:root[data-style="rose"][data-theme="light"] {
+  --color-primary-400: #f43f5e;
+  --color-primary-500: #e11d48;
+  --color-primary-600: #be123c;
+  --color-primary-content: #fff1f2;
+}
+
 :root[data-style="emerald"] {
   --color-primary-400: #34d399;
   --color-primary-500: #10b981;
