@@ -4,7 +4,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/utils/cn";
 
 const labelVariants = cva(
-  "inline-flex select-none items-center gap-2 text-content-100 text-sm",
+  "relative inline-flex select-none items-center gap-2 text-content-100 text-sm",
   {
     variants: {
       disabled: {

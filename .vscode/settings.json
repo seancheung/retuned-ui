@@ -42,5 +42,6 @@
     "*.css": "tailwindcss"
   },
   "tailwindCSS.classAttributes": ["className", "[a-zA-Z]+ClassName"],
-  "tailwindCSS.classFunctions": ["cn", "clsx", "cva"]
+  "tailwindCSS.classFunctions": ["cn", "clsx", "cva"],
+  "biome.lsp.bin": "./node_modules/@biomejs/biome/bin/biome"
 }

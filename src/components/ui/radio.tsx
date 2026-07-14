@@ -14,7 +14,7 @@ type RadioGroupContextValue = {
 const RadioGroupContext = createContext<RadioGroupContextValue | null>(null);
 
 const variants = cva(
-  "inline-flex select-none items-center gap-2 text-content-100",
+  "relative inline-flex select-none items-center gap-2 text-content-100",
   {
     variants: {
       size: {

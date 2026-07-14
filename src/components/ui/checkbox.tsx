@@ -5,7 +5,7 @@ import { CheckIcon, MinusIcon } from "lucide-react";
 import { cn } from "@/utils/cn";
 
 const variants = cva(
-  "inline-flex select-none items-center gap-2 text-content-100",
+  "relative inline-flex select-none items-center gap-2 text-content-100",
   {
     variants: {
       size: {
