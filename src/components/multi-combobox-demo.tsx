@@ -1,4 +1,4 @@
-import { MicIcon } from "lucide-react";
+import { MicIcon, XIcon } from "lucide-react";
 import { useEffect, useState } from "react";
 import { ComponentGroup, ComponentRow, voiceOptions } from "@/components/demo";
 import MultiCombobox from "@/components/ui/multi-combobox";
@@ -25,6 +25,9 @@ export default function MultiComboboxDemo() {
           defaultValue={["alloy", "echo", "fable", "onyx"]}
           maxTagCount={2}
         />
+      </ComponentRow>
+      <ComponentRow title="Hide tags" vertical>
+        <HideTagsMultiCombobox />
       </ComponentRow>
       <ComponentRow title="Icon">
         <MultiCombobox
@@ -54,6 +57,44 @@ export default function MultiComboboxDemo() {
         />
       </ComponentRow>
     </ComponentGroup>
+  );
+}
+
+function HideTagsMultiCombobox() {
+  const [values, setValues] = useState<string[]>(["alloy", "echo"]);
+  const selected = voiceOptions.filter((o) => values.includes(o.value));
+
+  return (
+    <div className="flex flex-col gap-2">
+      <MultiCombobox
+        options={voiceOptions}
+        value={values}
+        onChange={setValues}
+        hideTags
+      />
+      {selected.length > 0 && (
+        <div className="flex flex-col gap-1">
+          {selected.map((opt) => (
+            <div
+              key={opt.value}
+              className="flex items-center justify-between rounded-sm bg-base-300 p-1.5 text-content-200 text-xs"
+            >
+              {opt.label}
+              <button
+                type="button"
+                aria-label={`Remove ${opt.label}`}
+                onClick={() =>
+                  setValues((prev) => prev.filter((v) => v !== opt.value))
+                }
+                className="inline-flex shrink-0 cursor-pointer items-center justify-center rounded-sm text-content-400 transition hover:text-content-200"
+              >
+                <XIcon className="size-3" />
+              </button>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
   );
 }
 

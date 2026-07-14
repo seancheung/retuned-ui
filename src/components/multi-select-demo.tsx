@@ -1,4 +1,5 @@
-import { Mic2Icon, MicIcon } from "lucide-react";
+import { Mic2Icon, MicIcon, XIcon } from "lucide-react";
+import { useState } from "react";
 import { ComponentGroup, ComponentRow, voiceOptions } from "@/components/demo";
 import MultiSelect from "@/components/ui/multi-select";
 
@@ -24,6 +25,9 @@ export default function MultiSelectDemo() {
           defaultValue={["alloy", "echo", "fable", "onyx"]}
           maxTagCount={2}
         />
+      </ComponentRow>
+      <ComponentRow title="Hide tags" vertical>
+        <HideTagsMultiSelect />
       </ComponentRow>
       <ComponentRow title="Icon">
         <MultiSelect
@@ -57,5 +61,43 @@ export default function MultiSelectDemo() {
         />
       </ComponentRow>
     </ComponentGroup>
+  );
+}
+
+function HideTagsMultiSelect() {
+  const [values, setValues] = useState<string[]>(["alloy", "echo"]);
+  const selected = voiceOptions.filter((o) => values.includes(o.value));
+
+  return (
+    <div className="flex flex-col gap-2">
+      <MultiSelect
+        options={voiceOptions}
+        value={values}
+        onChange={setValues}
+        hideTags
+      />
+      {selected.length > 0 && (
+        <div className="flex flex-col gap-1">
+          {selected.map((opt) => (
+            <div
+              key={opt.value}
+              className="flex items-center justify-between rounded-sm bg-base-300 p-1.5 text-content-200 text-xs"
+            >
+              <span>{opt.label}</span>
+              <button
+                type="button"
+                aria-label={`Remove ${opt.label}`}
+                onClick={() =>
+                  setValues((prev) => prev.filter((v) => v !== opt.value))
+                }
+                className="inline-flex shrink-0 cursor-pointer items-center justify-center rounded-sm text-content-400 transition hover:text-content-200"
+              >
+                <XIcon className="size-3" />
+              </button>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
   );
 }

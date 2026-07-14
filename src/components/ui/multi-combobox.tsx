@@ -82,6 +82,7 @@ export type MultiComboboxProps<T = unknown> = Omit<
     isFetchingMore?: boolean;
     onLoadMore?: () => void;
     maxTagCount?: number;
+    hideTags?: boolean;
     renderOption?: (option: MultiComboboxOption<T>) => React.ReactNode;
   };
 
@@ -108,6 +109,7 @@ export default function MultiCombobox<T = unknown>({
   isFetchingMore = false,
   onLoadMore,
   maxTagCount,
+  hideTags = false,
   renderOption,
   error,
   disabled,
@@ -132,8 +134,12 @@ export default function MultiCombobox<T = unknown>({
     const option = options.find((o) => o.value === v);
     return { value: v, label: option?.label ?? String(v) };
   });
-  const visibleTags = maxTagCount != null ? tags.slice(0, maxTagCount) : tags;
-  const hiddenCount = tags.length - visibleTags.length;
+  const visibleTags = hideTags
+    ? []
+    : maxTagCount != null
+      ? tags.slice(0, maxTagCount)
+      : tags;
+  const hiddenCount = hideTags ? 0 : tags.length - visibleTags.length;
 
   const trimmed = inputValue.trim();
   const query = trimmed.toLowerCase();
@@ -299,7 +305,7 @@ export default function MultiCombobox<T = unknown>({
         className={cn(
           "group relative",
           containerVariants({ className, size, error, disabled }),
-          tags.length > 0
+          visibleTags.length > 0
             ? "pl-1"
             : { sm: "pl-2", md: "pl-3", lg: "pl-3.5" }[size ?? "md"],
         )}
@@ -341,7 +347,7 @@ export default function MultiCombobox<T = unknown>({
           type="text"
           role="combobox"
           value={inputValue}
-          placeholder={tags.length === 0 ? placeholder : undefined}
+          placeholder={hideTags || tags.length === 0 ? placeholder : undefined}
           disabled={disabled}
           autoComplete="off"
           aria-autocomplete="list"
@@ -374,6 +380,7 @@ export default function MultiCombobox<T = unknown>({
               }
               if (
                 e.key === "Backspace" &&
+                !hideTags &&
                 inputValue.length === 0 &&
                 values.length > 0
               ) {

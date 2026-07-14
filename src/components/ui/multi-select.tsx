@@ -69,6 +69,7 @@ export type MultiSelectProps<T = unknown> = Omit<
     clearable?: boolean;
     onClear?: () => void;
     maxTagCount?: number;
+    hideTags?: boolean;
     renderOption?: (option: MultiSelectOption<T>) => React.ReactNode;
   };
 
@@ -87,6 +88,7 @@ export default function MultiSelect<T = unknown>({
   clearable,
   onClear,
   maxTagCount,
+  hideTags = false,
   renderOption,
   ...props
 }: MultiSelectProps<T>) {
@@ -98,9 +100,12 @@ export default function MultiSelect<T = unknown>({
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const selected = options.filter((o) => values.includes(o.value));
-  const visibleTags =
-    maxTagCount != null ? selected.slice(0, maxTagCount) : selected;
-  const hiddenCount = selected.length - visibleTags.length;
+  const visibleTags = hideTags
+    ? []
+    : maxTagCount != null
+      ? selected.slice(0, maxTagCount)
+      : selected;
+  const hiddenCount = hideTags ? 0 : selected.length - visibleTags.length;
 
   const { refs, floatingStyles, context, placement } = useFloating({
     open,
@@ -193,7 +198,7 @@ export default function MultiSelect<T = unknown>({
         className={cn(
           "group",
           triggerVariants({ className, size, error, disabled }),
-          selected.length > 0
+          visibleTags.length > 0
             ? "pl-1"
             : { sm: "pl-2", md: "pl-3", lg: "pl-3.5" }[size ?? "md"],
         )}
@@ -201,7 +206,7 @@ export default function MultiSelect<T = unknown>({
       >
         {icon}
         <span className="flex min-w-0 flex-1 flex-wrap items-center gap-1 text-left">
-          {selected.length === 0 && (
+          {(hideTags || selected.length === 0) && (
             <span className="truncate text-content-400">{placeholder}</span>
           )}
           {visibleTags.map((opt) => (
