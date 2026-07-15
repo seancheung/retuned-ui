@@ -312,6 +312,9 @@ export default function Combobox<T = unknown>({
               if (!disabled && !open) setOpen(true);
             },
             onKeyDown(e) {
+              // Ignore Enter that confirms IME composition (keyCode 229 for
+              // browsers that report isComposing=false on that keydown)
+              if (e.nativeEvent.isComposing || e.keyCode === 229) return;
               if (e.key === "Enter") {
                 if (activeIndex !== null && items[activeIndex]) {
                   e.preventDefault();
