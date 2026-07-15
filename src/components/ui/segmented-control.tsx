@@ -119,6 +119,7 @@ export default function SegmentedControl<T extends string | number = string>({
               <motion.span
                 aria-hidden
                 layoutId={layoutId}
+                layoutDependency={current}
                 className={cn(thumbVariants({ variant }))}
                 transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
               />
