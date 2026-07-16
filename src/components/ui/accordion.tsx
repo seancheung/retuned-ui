@@ -25,7 +25,6 @@ export type AccordionItem<T extends string | number = string> = {
   value: T;
   title: React.ReactNode;
   content: React.ReactNode;
-  icon?: React.ReactNode;
   disabled?: boolean;
 };
 
@@ -35,6 +34,9 @@ export type AccordionProps<T extends string | number = string> = Omit<
 > &
   VariantProps<typeof variants> & {
     items: AccordionItem<T>[];
+    chevron?:
+      | boolean
+      | ((open: boolean, item: AccordionItem<T>) => React.ReactNode);
   } & (
     | {
         multiple?: false;
@@ -61,6 +63,7 @@ export default function Accordion<T extends string | number = string>({
   value: controlledValue,
   defaultValue,
   onChange,
+  chevron = true,
   bordered,
   className,
   ...props
@@ -96,28 +99,32 @@ export default function Accordion<T extends string | number = string>({
             key={String(item.value)}
             className={cn(item.disabled && "opacity-40")}
           >
-            <button
-              type="button"
-              id={triggerId}
-              aria-expanded={open}
-              aria-controls={contentId}
-              disabled={item.disabled}
-              onClick={() => handleToggle(item)}
-              className="flex h-9 w-full not-disabled:cursor-pointer items-center gap-2 px-3 text-left font-medium outline-none transition-all focus-visible:ring-3 focus-visible:ring-ring/10 disabled:cursor-not-allowed"
-            >
-              {item.icon && (
-                <span className="has-icon shrink-0 text-content-400">
-                  {item.icon}
-                </span>
-              )}
-              <span className="flex-1 truncate">{item.title}</span>
-              <ChevronDownIcon
-                className={cn(
-                  "size-3.5 shrink-0 text-content-400 transition-transform duration-200",
-                  open && "rotate-180",
+            <div className="flex items-center">
+              <button
+                type="button"
+                id={triggerId}
+                aria-expanded={open}
+                aria-controls={contentId}
+                disabled={item.disabled}
+                onClick={() => handleToggle(item)}
+                className="flex h-9 min-w-0 flex-1 not-disabled:cursor-pointer items-center gap-2 px-3 text-left font-medium outline-none transition-all focus-visible:ring-3 focus-visible:ring-ring/10 disabled:cursor-not-allowed"
+              >
+                {typeof item.title === "string" ? (
+                  <span className="flex-1 truncate">{item.title}</span>
+                ) : (
+                  item.title
                 )}
-              />
-            </button>
+                {chevron === true && (
+                  <ChevronDownIcon
+                    className={cn(
+                      "size-3.5 shrink-0 transition-transform duration-200",
+                      open && "rotate-180",
+                    )}
+                  />
+                )}
+              </button>
+              {typeof chevron === "function" && chevron(open, item)}
+            </div>
             <AnimatePresence initial={false}>
               {open && (
                 <motion.div
